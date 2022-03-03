@@ -1,0 +1,30 @@
+def isModuleLibary = isLibary.toBoolean()
+def isCmake = isCamke.toBoolean()
+apply from: "../build_config/common.gradle"
+android {
+    defaultConfig {
+        if (!isModuleLibary) {
+            applicationId "com.viomi.ffmpeg.codec"
+            /*升级的sdk 需要用*/
+            versionCode 1
+            versionName "1.0.0"
+        }
+    }
+    if (isCmake) {
+        externalNativeBuild {
+            cmake {
+                path file('CMakeLists.txt')
+            }
+        }
+    } else {
+        sourceSets {
+            main {
+                jniLibs.srcDirs = ['libs']
+                jni.srcDirs = []
+            }
+        }
+    }
+}
+dependencies {
+    implementation project(path: ':module_common')
+}

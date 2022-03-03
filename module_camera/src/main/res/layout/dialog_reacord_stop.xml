@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite40">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="722px"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_20_radius_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/recordstop_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="49px"
+                android:text="@string/recorded_text"
+                android:textColor="@color/colorWhite"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/recordstop_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25px"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:maxLines="3"
+                android:paddingHorizontal="20px"
+                android:text="@string/recorded_content"
+                android:textColor="@color/colorWhite60"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recordstop_title" />
+
+            <Button
+                android:id="@+id/recordstop_cancel"
+                android:layout_width="272px"
+                android:layout_height="94px"
+                android:layout_marginStart="76px"
+                android:layout_marginTop="30px"
+                android:layout_marginEnd="25px"
+                android:layout_marginBottom="32px"
+                android:background="@drawable/shape_12_radius_gray_bg"
+                android:gravity="center"
+                android:text="@string/cancel_text"
+                android:textColor="@color/viomi_green"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/recordstop_sure"
+                app:layout_constraintTop_toBottomOf="@id/recordstop_content" />
+
+            <Button
+                android:id="@+id/recordstop_sure"
+                android:layout_width="272px"
+                android:layout_height="94px"
+                android:layout_marginTop="30px"
+                android:layout_marginEnd="76px"
+                android:layout_marginBottom="32px"
+                android:background="@drawable/shape_12_radius_green_bg"
+                android:gravity="center"
+                android:text="@string/sure_text"
+                android:textColor="@color/colorWhite"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toBottomOf="@id/recordstop_cancel"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toRightOf="@id/recordstop_cancel"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/recordstop_cancel" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

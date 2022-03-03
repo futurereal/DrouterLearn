@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="date_content" type="id"/>
+    <item name="date_day" type="id"/>
+    <item name="date_hour" type="id"/>
+    <item name="date_minute" type="id"/>
+</resources>

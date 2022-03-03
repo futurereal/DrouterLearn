@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black">
+
+        <Button
+            android:id="@+id/cameratest_camera"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/viomi_green"
+            android:onClick="startCamera"
+            android:text="启动拍摄"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cameratest_cut"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/cameratest_cut"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            android:onClick="videoCut"
+            android:text="剪切视频"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cameratest_merge"
+            app:layout_constraintStart_toEndOf="@id/cameratest_camera"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/cameratest_merge"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/red_stroke"
+            android:onClick="videoMerge"
+            android:text="合成视频"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cameratest_cover"
+            app:layout_constraintStart_toEndOf="@id/cameratest_cut"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/cameratest_cover"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/red_stroke"
+            android:onClick="videoCover"
+            android:text="获取封面"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cameratest_upload"
+            app:layout_constraintStart_toEndOf="@id/cameratest_merge"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/cameratest_upload"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/red_stroke"
+            android:onClick="uploadAll"
+            android:text="上传视频和封面"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cameratest_deleteall"
+            app:layout_constraintStart_toEndOf="@id/cameratest_cover"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/cameratest_deleteall"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/viomi_green"
+            android:onClick="deleteAllVideo"
+            android:text="删除所有视频"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cameratest_getallvideoinfo"
+            app:layout_constraintStart_toEndOf="@id/cameratest_upload"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/cameratest_getallvideoinfo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/viomi_green"
+            android:onClick="getAllViedeoInfo"
+            android:text="获取缓存的视频"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cameratest_deleteall"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/cameratest_compress"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/viomi_green"
+            android:onClick="startCompress"
+            android:text="压缩文件"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/cameratest_camera"
+            app:layout_constraintStart_toStartOf="@id/cameratest_camera"
+            app:layout_constraintTop_toBottomOf="@id/cameratest_camera" />
+
+
+        <Button
+            android:id="@+id/cameratest_ovenmain"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/viomi_green"
+            android:onClick="gotoMain"
+            android:text="主界面"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cameratest_compress"
+            app:layout_constraintTop_toBottomOf="@id/cameratest_camera" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

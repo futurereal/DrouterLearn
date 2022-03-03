@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@android:color/black">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/menuheader_head"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundAsCircle="true" />
+
+
+        <TextView
+            android:id="@+id/menuheader_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/white"
+            android:textSize="44dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/menuheader_head"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/never_login" />
+
+        <ImageView
+            android:id="@+id/menuheader_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/set_more_white"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/menuheader_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/menuheader_name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

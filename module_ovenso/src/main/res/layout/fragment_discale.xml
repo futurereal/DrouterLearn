@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ovenso_common_bg">
+
+        <TextView
+            android:id="@+id/discale_title"
+            style="@style/font_style_sc_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="49dp"
+            android:text="@string/oven_discalling_title"
+            android:textColor="@android:color/white"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/discale_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@style/font_style_sc_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="3"
+            android:paddingHorizontal="20dp"
+            android:text="@string/oven_discalling_tip_one"
+            android:textColor="@color/color_white_alpha_40"
+            android:textSize="34dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/discale_title" />
+
+        <TextView
+            android:id="@+id/discale_cancel"
+            android:layout_width="272dp"
+            android:layout_height="94dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/shape_solid_2d_cor13_stroke_green"
+            android:gravity="center"
+            android:text="@string/oven_dialog_cancel"
+            android:textColor="@color/viomi_green"
+            android:textSize="34dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/discale_sure"
+            app:layout_constraintTop_toBottomOf="@id/discale_content" />
+
+        <TextView
+            android:id="@+id/discale_sure"
+            android:layout_width="272dp"
+            android:layout_height="94dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/bg_gradient_corner_13_radius"
+            android:gravity="center"
+            android:text="@string/ovenso_next"
+            android:textColor="@color/white"
+            android:textSize="34dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/discale_cancel"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/discale_content" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

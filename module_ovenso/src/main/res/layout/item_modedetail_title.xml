@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:background="@drawable/img_theme1">
+
+        <TextView
+            android:id="@+id/modedetail_stepname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:alpha="0.8"
+            android:includeFontPadding="false"
+            tools:text="源气蒸"
+            android:textColor="@color/white"
+            android:textSize="34dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/modedetail_step_selecttip"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/select_oval_stroke_yellow"
+            app:layout_constraintLeft_toLeftOf="@id/modedetail_stepname"
+            app:layout_constraintRight_toRightOf="@id/modedetail_stepname"
+            app:layout_constraintTop_toBottomOf="@id/modedetail_stepname" />
+
+
+        <TextView
+            android:id="@+id/modedetail_steptip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oval_green"
+            android:gravity="center"
+            android:text="@string/cookpara_stepone"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            app:layout_constraintBottom_toBottomOf="@id/modedetail_step_selecttip"
+            app:layout_constraintLeft_toLeftOf="@id/modedetail_step_selecttip"
+            app:layout_constraintRight_toRightOf="@id/modedetail_step_selecttip"
+            app:layout_constraintTop_toTopOf="@id/modedetail_step_selecttip" />
+
+
+        <View
+            android:id="@+id/modedetail_line_step"
+            android:layout_width="100dp"
+            android:layout_height="6dp"
+            android:alpha="0.5"
+            android:background="@drawable/shape_solid_28_cor20"
+            app:layout_constraintBottom_toBottomOf="@id/modedetail_steptip"
+            app:layout_constraintStart_toEndOf="@id/modedetail_stepname"
+            app:layout_constraintTop_toTopOf="@id/modedetail_steptip" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

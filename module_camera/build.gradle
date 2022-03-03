@@ -1,0 +1,41 @@
+def isModuleLibary = isLibary.toBoolean()
+apply from: "../build_config/common.gradle"
+android {
+    defaultConfig {
+        if (!isModuleLibary) {
+            applicationId "com.viomi.camera"
+            /*升级的sdk 需要用*/
+            versionCode 1
+            versionName "1.0.0"
+        }
+        //两个模块公用有冲突
+        packagingOptions {
+            pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            jni.srcDirs = []
+        }
+    }
+    if (!isModuleLibary) {
+        productFlavors {
+            camera_ {
+                applicationId "com.viomi.camera"
+                versionCode 1
+                versionName "1.0.1"
+                resValue "string", "app_name", "测试视频模块"
+            }
+        }
+
+    }
+}
+dependencies {
+    implementation project(path: ':module_common')
+    implementation project(path: ':module_ffmpeg_cmd')
+    implementation project(path: ':module_ffmpeg_codec')
+    implementation rootProject.ext.dependencies["retrofit2-fastjson-converter"]
+    implementation rootProject.ext.dependencies["adapter-rxjava"]
+}

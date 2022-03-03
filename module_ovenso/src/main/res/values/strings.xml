@@ -1,0 +1,192 @@
+<resources>
+    <string name="app_name_ovenso">微蒸烤一体机</string>
+    <string name="app_name_ovensotest">烤箱测试</string>
+
+    <string name="oven_continue">继续</string>
+    <string name="oven_end_order">结束预约</string>
+    <string name="oven_order_date_title">预计%1$s完成烹饪</string>
+
+    <string name="oven_dialog_cancel">取消</string>
+    <string name="oven_dialog_sure">确定</string>
+    <string name="oven_dialog_title_cooking">结束烹饪</string>
+    <string name="oven_dialog_content_order">确定结束当前预约</string>
+    <string name="oven_dialog_content_cooking">确定结束当前烹饪</string>
+
+
+    <string name="oven_cookparam_tmphigh">当前炉腔温度高于烹饪设置温度</string>
+    <string name="oven_cookparam_tmphighone">烤的温度必须高于第一阶段蒸的温度</string>
+    <string name="oven_cookparam_launching">启动中</string>
+    <string name="oven_cookparam_minute">分</string>
+    <string name="oven_cookparam_settingfail">设置失败</string>
+    <string name="oven_cookparam_dooropened">门已打开</string>
+    <string name="oven_cookparam_isbooking">正在预约...</string>
+    <string name="oven_cookparam_bookfail">预约失败</string>
+    <string name="oven_cookparam_assist">辅助</string>
+    <string name="oven_cookparam_cook">烹饪</string>
+    <string name="oven_recipedetail_launcherfail">启动失败</string>
+    <string name="oven_preheart_tip">预热提醒</string>
+    <string name="oven_preheart_content">预热前请不要把食材放进烤箱,直至预热结束</string>
+
+    <string name="oven_discalling_title">除垢</string>
+    <string name="oven_discalling_tip_one">步骤一：请清除废水盒积水，我已清除积水，确认清除后点击下一步></string>
+    <string name="oven_discalling_tip_two">步骤二：将5-6g的柠檬酸除垢剂（粉）加入300mL的水中，充分溶解后倒入接水盒，关闭门并插入接水盒</string>
+    <string name="oven_discalling_tip_three">请清洗接水盒并再次装入300ml清水，插入接水盒后继续除垢</string>
+    <string name="oven_discalling_tip_four">请清理废水盒积水</string>
+    <string name="oven_deodorization_tip">请打开门烘干和散味</string>
+    <string name="oven_discalling_start">开始除垢</string>
+    <string name="oven_discalling_continue">继续除垢</string>
+
+    <string name="oven_deodorization_finish_title">除味完成</string>
+    <string name="oven_deodorization_finish">请记得打开烤箱门晾干</string>
+
+    <string name="ovenso_next">下一步</string>
+    <string name="ovenso_close">关闭</string>
+    <string name="ovenso_ok">好的</string>
+    <string name="ovenso_known">知道了</string>
+    <string name="ovenso_start">开始</string>
+    <string name="ovenso_appoint">预约</string>
+    <string name="ovenso_pause">暂停</string>
+    <string name="ovenso_over">结束</string>
+    <string name="ovenso_finish">完成</string>
+    <string name="ovenso_delete">删除</string>
+
+    <string name="over_recipedetail_dooropen">门打开状态</string>
+    <string name="oven_collected">已收藏</string>
+    <string name="oven_collect">收藏</string>
+    <string name="oven_main_lightopen">灯已打开</string>
+    <string name="oven_main_waterboxopen">水箱已经打开</string>
+    <string name="oven_common_open">已经打开</string>
+    <string name="oven_common_close">已经关闭</string>
+    <string name="oven_common_waterbox">水箱</string>
+    <string name="oven_common_light">灯</string>
+    <string name="ovenso_my_recipe">我的菜谱</string>
+    <string name="oven_recommand">推荐</string>
+    <string name="menu_pengren">烹饪模式</string>
+    <string name="menu_fuzhu">辅助模式</string>
+    <string name="menu_recipe">推荐菜谱</string>
+    <string name="menu_shezhi">设置</string>
+    <string name="pickerview_minute">分</string>
+    <string name="temperature_single">℃</string>
+    <string name="not_clean_tip">此功能非自清洁模式，是用55℃蒸汽软化内胆油污，方便用户清洁</string>
+    <string name="recipe_material">原料</string>
+    <string name="make_method">做法</string>
+    <string name="oven_channel_test">测试渠道</string>
+    <string name="oven_channel_product">正式渠道</string>
+    <string name="camera_title">相机</string>
+    <string name="cook_leavetime">剩余时间</string>
+    <string name="cook_temperatureunit">℃</string>
+    <string name="cookrunning_notcook">非烹饪状态，不能录像</string>
+    <string name="cookrunning_not_record">在蒸气、微波模式下不能拍摄哦</string>
+    <string name="cookrunning_recording_start">拍摄</string>
+    <string name="cookrunning_recording">拍摄中</string>
+    <string name="cookrunning_recording_pause">已暂停</string>
+    <string name="delete_success">删除成功</string>
+    <string name="upload_again">重新上传</string>
+    <string name="oven_combined_mode_text">组合</string>
+    <string name="login_now">立即登录</string>
+    <string name="cookpara_stepone">1</string>
+    <string name="cookpara_steptwo">2</string>
+    <string name="setting_theme">主题设置</string>
+
+    <string name="cancel_upload_text">取消上传</string>
+    <string name="messagelist_nomessage">暂无消息</string>
+    <string name="messagelist_title">消息中心</string>
+    <string name="ovenaging_title">整机老化</string>
+    <string name="ovenaging_result_failt">老化失败</string>
+    <string name="ovenaging_workstatus_title">工作状态：</string>
+    <string name="ovenaging_currenttemp_title">当前温度：</string>
+    <string name="ovenaging_current_mode">当前模式:</string>
+    <string name="ovenaging_left_time">剩余时间:</string>
+    <string name="ovenaging_result_success">老化成功</string>
+    <string name="aging_ovenso_modeone">纯蒸</string>
+    <string name="aging_ovenso_modetwo">热风烤</string>
+    <string name="aging_ovenso_modethree">风扇烤</string>
+    <string name="aging_ovenmicro_modeone">纯蒸</string>
+    <string name="aging_ovenmicro_modetwo">微波</string>
+    <string name="aging_ovenmicro_modethree">脆烤</string>
+    <string name="aging_finish_tip">请结束老化之后再退出</string>
+    <string name="ovenmain_buildtime">构建时间</string>
+    <string name="common_delete">删除？</string>
+    <string name="common_content">确定删除该消息记录</string>
+    <string name="delete_title">删除？</string>
+    <string name="delete_content">确定删除该消息记录</string>
+    <string name="cancel">取消</string>
+    <string name="oven_sure">确定</string>
+    <!--<string name="cookrun_usetime">已用时</string>-->
+    <string name="cookrun_lefttime">剩余时间</string>
+    <string name="cookrun_preheat_pause">预热已暂停</string>
+
+    <string name="custommode_title">自定义模式</string>
+    <string name="custommode_tip">至少设置一个模式才能烹饪</string>
+    <string name="custommode_select_title">选择模式</string>
+    <string name="custommode_firepower_sample">120℃ | 45分钟</string>
+    <string name="custommode_select_tempearaturewarm_before">温度不可低于前段模式温度，请调整</string>
+    <string name="custommode_select_tempearaturewarm_after">温度不可高于后段模式温度，请调整</string>
+    <string name="cookrunning_testStep">模式步骤</string>
+    <string name="cookrunning_testchugou">测试除垢、除味</string>
+    <string name="cookrunning_recipestep">测试菜谱步骤</string>
+    <string name="cookrunning_test_water_tank">测试水箱位置</string>
+    <string name="ovenso_test_devce_fault">测试故障位</string>
+
+    <string name="ovenso_time_sample">12:00</string>
+    <string name="ovenso_time_format">HH:mm</string>
+
+    <string name="recipe_step_no">无步骤</string>
+    <string name="recipe_step_prehearting">预热中</string>
+    <string name="recipe_step_preheartfinish">预热已完成，可放入食材继续烹饪</string>
+    <string name="recipe_step_addegg">取出打蛋黄</string>
+
+    <string name="recipe_step_pause">烹饪暂停</string>
+
+
+    <string name="ovenso_devicefalut_pan_high">蒸发盘高温</string>
+    <string name="ovenso_devicefalut_pan_low">蒸发盘低温</string>
+    <string name="ovenso_devicefalut_pan_content">蒸发盘加热功能异常，请断电重启产品，若仍然无法解决，请联系售后服务中心，售后电话400-100-2632。</string>
+    <string name="ovenso_devicefalut_cavity_high">腔体高温</string>
+    <string name="ovenso_devicefalut_cavity_low">腔体低温</string>
+    <string name="ovenso_devicefalut_cavity_content">腔体加热功能异常，请断电重启产品，若仍然无法解决，请联系售后服务中心，售后电话400-100-2632。</string>
+    <string name="ovenso_devicefalut_cavity_ntf">腔体NTC开/短路</string>
+    <string name="ovenso_devicefalut_cavity_ntf_content">腔体温度传感器故障；请断电重启产品，若仍然无法解决，请联系售后服务中心，售后电话400-100-2632。</string>
+    <string name="ovenso_devicefalut_pan_ntf"> 蒸发盘NTC开/短路故障</string>
+    <string name="ovenso_devicefalut_pan_ntf_content">蒸发盘温度传感器故障；请断电重启产品，若仍然无法解决，请联系售后服务中心，售后电话400-100-2632。</string>
+    <string name="ovenso_devicefalut_camera">摄像头故障</string>
+    <string name="ovenso_devicefalut_camera_content">摄像头故障；请断电重启产品，若仍然无法解决，请联系售后服务中心，售后电话400-100-2632。</string>
+    <string name="ovenso_devicefalut_fan">摄像头风扇故障</string>
+    <string name="ovenso_devicefalut_fan_content">风扇故障；请断电重启产品，若仍然无法解决，请联系售后服务中心，售后电话400-100-2632。</string>
+    <string name="ovenso_devicefalut_motor">放水电机故障</string>
+    <string name="ovenso_devicefalut_motor_content">放水电机故障；请断电重启产品，若仍然无法解决，请联系售后服务中心，售后电话400-100-2632。</string>
+    <string name="ovenso_devicefalut_discaling">除垢故障</string>
+    <string name="ovenso_devicefalut_discaling_content">除垢故障；请断电重启产品，若仍然无法解决，请联系售后服务中心，售后电话400-100-2632。</string>
+
+    // 通讯故障
+    <string name="disconnect_title">通讯故障</string>
+    <string name="disconnect_title_content">显示板与电源板通讯故障；请断电重启产品，若仍然无法解决，请联系售后服务中心，售后电话400-100-2632。</string>
+    <string name="video_upload_fail">视频上传失败</string>
+    <string name="video_upload_fail_content">【%s】视频上传失败，请检查你的网络设置后重新上传；上传成功后，可在米家或云米商城App中查看。</string>
+
+    <string name="ovenso_lockwater">缺水</string>
+    <string name="ovenso_lockwater_tip">设备缺水，已暂停烹饪，请补充水量                                                  </string>
+
+    <string name="microwave_powername_one">低火</string>
+    <string name="microwave_powername_two">中低火</string>
+    <string name="microwave_powername_three">中火</string>
+    <string name="microwave_powername_four">中高火</string>
+    <string name="microwave_powername_five">高火</string>
+
+
+    <string name="error_water_tank_close_content">水箱没有放置到位，请检查水箱位置</string>
+    <string name="ovenso_timeunit">分钟</string>
+    <string name="ovenso_powerunit">℃</string>
+    <string name="percent_unit">%</string>
+    <string name="oventest_ovenmain">烤箱主界面</string>
+    <string name="ovenmain_test_recipe">菜谱5</string>
+    <string name="ovenmain_test_mode">模式5</string>
+    <string name="appontfragment_timetip">结束时间点太小,请重新设置</string>
+    <string name="messagelist_currenttip">当前是消息中心界面，无法重新进入</string>
+    <string name="camera_tip">当前是预览界面,无法重新进入</string>
+    <string name="cookrunning_not_bind">请先用云米或者米家绑定设备</string>
+    <string name="myrecipe_empty_tip">可在APP-我的设备上传自定义菜谱哦</string>
+    <string name="myrecipe_empty_title">您还没有定制菜谱呢</string>
+    <string name="myrecipe_not_login">登录后才可查看自定义菜谱哦</string>
+
+</resources>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@drawable/img_theme1">
+        <!--菜谱背景图-->
+        <ImageView
+            android:id="@+id/modedetail_recipebg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_work_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--菜谱图片-->
+        <com.viomi.ovenso.view.RoundImageView
+            android:id="@+id/modedetail_recipephoto"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/ovenso_recipebg_margin"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@id/modedetail_recipebg"
+            app:layout_constraintLeft_toLeftOf="@id/modedetail_recipebg"
+            app:layout_constraintRight_toRightOf="@id/modedetail_recipebg"
+            app:layout_constraintTop_toTopOf="@id/modedetail_recipebg"
+            app:sriv_left_bottom_corner_radius="@dimen/ovenso_recipe_radius"
+            app:sriv_left_top_corner_radius="@dimen/ovenso_recipe_radius"
+            app:sriv_right_bottom_corner_radius="@dimen/ovenso_recipe_radius"
+            app:sriv_right_top_corner_radius="@dimen/ovenso_recipe_radius"
+            tools:background="@drawable/dish_id_2" />
+        <!--开始-->
+        <include
+            android:id="@+id/include_start"
+            layout="@layout/layout_btn_start"
+            app:layout_constraintLeft_toRightOf="@id/modedetail_timerpicker" />
+        <!--预约-->
+        <include
+            android:id="@+id/include_appoint"
+            layout="@layout/layout_btn_appoint"
+            android:visibility="gone"
+            tools:visibility="visible" />
+        <!--收藏-->
+        <include
+            android:id="@+id/include_collect"
+            layout="@layout/layout_btn_collect"
+            android:visibility="gone" />
+
+        <!--时间选择器-->
+        <com.viomi.ovenso.view.HorizonPickerView
+            android:id="@+id/modedetail_timerpicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:pickerview_unitText="@string/pickerview_minute"
+            app:layout_constraintBottom_toTopOf="@id/modedetail_temperaturepicker"
+            app:layout_constraintLeft_toRightOf="@id/modedetail_recipebg"
+            app:layout_constraintRight_toLeftOf="@id/include_start"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+        <!--温度选择器-->
+        <com.viomi.ovenso.view.HorizonPickerView
+            android:id="@+id/modedetail_temperaturepicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/modedetail_recipebg"
+            app:layout_constraintRight_toLeftOf="@id/include_start"
+            app:layout_constraintTop_toBottomOf="@id/modedetail_timerpicker"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_modedetail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintLeft_toRightOf="@id/modedetail_recipebg"
+            app:layout_constraintRight_toLeftOf="@id/include_start"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context=".ui.activity.ModeListActivity" />
+
+
+        <TextView
+            android:id="@+id/modedetail_recipe_time"
+            style="@style/text_white_normal"
+            android:fontFamily="@font/din_cond_bold"
+            android:textSize="138dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/modedetail_recipebg"
+            app:layout_constraintRight_toLeftOf="@id/include_start"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="03:00" />
+
+        <TextView
+            android:id="@+id/modedetail_recipe_timeflag"
+            style="@style/text_white_normal"
+            android:alpha="0.8"
+            android:text="烹饪需时"
+            android:textSize="28dp"
+            app:layout_constraintBottom_toTopOf="@id/modedetail_recipe_time"
+            app:layout_constraintLeft_toLeftOf="@id/modedetail_recipe_time" />
+
+        <!--预设温度-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/modedetail_target_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintLeft_toLeftOf="@id/modedetail_recipe_time"
+            app:layout_constraintTop_toBottomOf="@id/modedetail_recipe_time" />
+
+        <TextView
+            android:id="@+id/modedetail_recipe_temperature"
+            style="@style/text_white_normal"
+            android:textSize="36dp"
+            app:layout_constraintLeft_toLeftOf="@id/modedetail_recipe_time"
+            app:layout_constraintTop_toBottomOf="@id/modedetail_recipe_time"
+            tools:text="预设温度：100" />
+        <!--固定温度-->
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_custome_recipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="modedetail_recipe_time,modedetail_recipe_timeflag,modedetail_recipe_temperature"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/modedetail_selfclean_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/shape_solid_white_cor8"
+            android:includeFontPadding="false"
+            android:paddingHorizontal="11dp"
+            android:paddingVertical="9dp"
+            android:text="@string/not_clean_tip"
+            android:textColor="@color/color_white_alpha_70"
+            android:textSize="24dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:visibility="visible" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

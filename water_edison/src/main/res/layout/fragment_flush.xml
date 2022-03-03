@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/shape_dialog_bg"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_per"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="33dp"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:textColor="@color/color_green_light"
+            android:textSize="100dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="@string/setting_flush_tips"
+            android:textColor="#B2B2B2"
+            android:textSize="34dp" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="320dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginBottom="33dp"
+            android:background="@drawable/shape_solid_white_22"
+            android:gravity="center"
+            android:text="@string/setting_flush_stop"
+            android:textColor="@color/color_green_light"
+            android:textSize="34dp" />
+    </LinearLayout>
+</layout>

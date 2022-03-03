@@ -1,0 +1,49 @@
+apply from: "../build_config/common.gradle"
+android {
+    productFlavors {
+        ovenso7_ {
+            applicationId "com.viomi.ovenso.microwave"
+            versionCode 245
+            versionName "2.45.0"
+            resValue "string", "app_name", "微蒸烤一体机so7"
+            //manifest里面的值
+            manifestPlaceholders = [
+                    MTA_CHANNEL_VALUE: "ovenso7",
+                    FILE_PROVIDER    : "com.viomi.ovenso.microwave"]
+        }
+        ovenso6_ {
+            applicationId "com.viomi.ovenso"
+            versionCode 181
+            versionName "1.181.0"
+            resValue "string", "app_name", "蒸烤一体机so6"
+            //manifest里面的值
+            manifestPlaceholders = [
+                    MTA_CHANNEL_VALUE: "ovenso6",
+                    FILE_PROVIDER    : "com.viomi.ovenso"]
+        }
+        waterEdison_ {
+            applicationId "com.viomi.waterpurifier.edison"
+            versionCode 22
+            versionName "1.0.22"
+            resValue "string", "app_name", "净水器edison"
+            //manifest里面的值
+            manifestPlaceholders = [
+                    MTA_CHANNEL_VALUE: "waterEdison",
+                    FILE_PROVIDER    : "com.viomi.waterpurifier.edison"]
+        }
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+}
+dependencies {
+    implementation project(path: ':module_common')
+    implementation project(path: ':module_setting')
+//    implementation project(path: ':module_miot')
+//    implementation project(path: ':module_ovenso')
+//    implementation project(path: ':module_camera')
+    implementation project(path: ':water_edison')
+}

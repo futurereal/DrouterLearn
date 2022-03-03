@@ -1,0 +1,14 @@
+<resources>
+
+    <style name="ApplicationTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/viomi_green</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowAnimationStyle">@style/activityAnim</item>
+        <item name="android:windowBackground">@drawable/launche_windowbg</item>
+    </style>
+
+</resources>

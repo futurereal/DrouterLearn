@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dialog_water_quality_change_bg">
+
+        <com.viomi.waterpurifier.edison.widget.WaveView
+            android:id="@+id/qualityswitch_waveview"
+            android:layout_width="match_parent"
+            android:layout_height="720dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/qualityswitch_watertype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/qualityswitch_arrowhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
+
+        <TextView
+            android:id="@+id/qualityswitch_current_quality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="23dp"
+            android:textColor="@color/color_white"
+            android:textSize="36dp"
+            app:layout_constraintBottom_toBottomOf="@+id/qualityswitch_arrowhead"
+            app:layout_constraintRight_toLeftOf="@+id/qualityswitch_arrowhead"
+            app:layout_constraintTop_toTopOf="@+id/qualityswitch_arrowhead"
+            tools:text="@string/purified_water" />
+
+        ]\
+
+        <TextView
+            android:id="@+id/qualityswitch_target_quality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:textColor="@color/color_white"
+            android:textSize="36dp"
+            app:layout_constraintBottom_toBottomOf="@+id/qualityswitch_arrowhead"
+            app:layout_constraintLeft_toRightOf="@+id/qualityswitch_arrowhead"
+            app:layout_constraintTop_toTopOf="@+id/qualityswitch_arrowhead"
+            tools:text="@string/mineral_water" />
+
+        <TextView
+            android:id="@+id/qualityswitch_countdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="335dp"
+            android:textColor="@color/color_white"
+            android:textSize="187dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="50''" />
+
+        <TextView
+            android:id="@+id/qualityswitch_countdown_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/countdown"
+            android:textColor="@color/color_white"
+            android:textSize="34dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/qualityswitch_countdown" />
+
+        <Button
+            android:id="@+id/qualityswitch_skip"
+            android:layout_width="410dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/shape_blue_light"
+            android:text="@string/skip"
+            android:textColor="@color/color_white"
+            android:textSize="34dp"
+            app:layout_constraintBottom_toTopOf="@+id/qualityswitch_skip_tip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/qualityswitch_countdown_tip" />
+
+        <TextView
+            android:id="@+id/qualityswitch_skip_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="77dp"
+            android:text="@string/changing_skip_tip"
+            android:textColor="@color/color_white"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

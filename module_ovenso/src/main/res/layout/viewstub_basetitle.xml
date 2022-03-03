@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/bg_corner_10_gray_3e"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/basetitle_wifi"
+            style="@style/basetitle_imgbutton"
+            android:src="@drawable/basetitle_wifi_selector"
+            app:layout_constraintBottom_toTopOf="@id/basetitle_message"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/basetitle_message"
+            style="@style/basetitle_imgbutton"
+            android:src="@drawable/basetitle_msg_selector"
+            app:layout_constraintBottom_toTopOf="@id/basetitle_pannel_camera"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/basetitle_wifi" />
+
+        <ImageView
+            android:id="@+id/basetitle_pannel_camera"
+            style="@style/basetitle_imgbutton"
+            android:src="@drawable/basetitle_pannel_selector"
+            app:layout_constraintBottom_toTopOf="@id/basetitle_Light"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/basetitle_message" />
+
+        <ImageView
+            android:id="@+id/basetitle_Light"
+            style="@style/basetitle_imgbutton"
+            android:src="@drawable/basetitle_light_selector"
+            app:layout_constraintBottom_toTopOf="@id/basetitle_close"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/basetitle_pannel_camera" />
+
+        <ImageView
+            android:id="@+id/basetitle_close"
+            style="@style/basetitle_imgbutton"
+            android:src="@drawable/basetitle_close"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <View
+            android:layout_width="46dp"
+            android:layout_height="1dp"
+            android:background="#979797"
+            app:layout_constraintBottom_toTopOf="@id/basetitle_close"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/basetitle_Light" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

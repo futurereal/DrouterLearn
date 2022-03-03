@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="612dp"
+    android:layout_height="373dp"
+    android:background="@drawable/bg_dialog_single">
+
+  <ImageView
+      android:id="@+id/icon_warn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/warning_tip"
+      android:layout_marginTop="35dp"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"/>
+
+  <TextView
+      android:id="@+id/warn_title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/warn_title"
+      android:textColor="@color/color_white"
+      android:textSize="35dp"
+      android:fontFamily="@font/bebas_neue_bold"
+      android:layout_marginTop="15dp"
+      app:layout_constraintTop_toBottomOf="@id/icon_warn"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"/>
+
+  <TextView
+      android:id="@+id/warn_tips"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="--"
+      android:textColor="@color/color_99"
+      android:textSize="30dp"
+      android:layout_marginLeft="40dp"
+      android:layout_marginRight="40dp"
+      app:layout_constraintTop_toBottomOf="@id/warn_title"
+      app:layout_constraintBottom_toTopOf="@id/filterbug_close"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"/>
+
+  <Button
+      android:id="@+id/filterbug_close"
+      android:layout_width="256dp"
+      android:layout_height="79dp"
+      android:layout_marginBottom="35dp"
+      android:background="@drawable/selector_wifi_finish"
+      android:text="@string/iknow"
+      android:textColor="@color/color_white"
+      android:textSize="28dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.viomi.ovenso.view.LinearLayoutSel xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="217dp"
+    android:layout_height="84dp"
+    android:layout_marginTop="60dp"
+    android:layout_marginRight="60dp"
+    android:background="@drawable/gradient_green_bg"
+    android:gravity="center"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toTopOf="@+id/include_over_finish"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_chainStyle="packed">
+
+    <ImageView
+        android:id="@+id/pausecontinue_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icon_pause" />
+
+    <TextView
+        android:id="@+id/pausecontinue_tip"
+        style="@style/font_style_sc_regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text="@string/ovenso_pause"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+</com.viomi.ovenso.view.LinearLayoutSel>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="menu_water">
+        <item>head</item>
+        <item>wifi</item>
+        <item>hotspot</item>
+        <item>themeWater</item>
+        <item>cup</item>
+        <item>childLock</item>
+        <item>mineral</item>
+        <item>filter</item>
+        <item>screen</item>
+        <item>date</item>
+        <item>aboutSoft</item>
+    </string-array>
+
+
+</resources>

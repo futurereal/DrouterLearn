@@ -1,0 +1,3 @@
+[submodule "module_setting"]
+	path = module_setting
+	url = https://gitlab.viomi.net/app/Android/Libs/module_setting.git

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_basetitle_bg"
+        android:paddingLeft="30dp"
+        android:paddingRight="37dp">
+
+        <TextView
+            android:id="@+id/fault_title"
+            style="@style/font_style_sc_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/ovenso_devicefalut_pan_high" />
+
+        <TextView
+            android:id="@+id/fault_time"
+            style="@style/font_style_sc_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:includeFontPadding="false"
+            android:textColor="@color/messagefault_time"
+            android:textSize="24dp"
+            app:layout_constraintBottom_toBottomOf="@id/fault_title"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/fault_title"
+            tools:text="@string/ovenso_time_format" />
+
+        <TextView
+            android:id="@+id/fault_content"
+            style="@style/font_style_sc_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/color_4c_90"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="@id/fault_title"
+            app:layout_constraintTop_toBottomOf="@id/fault_title"
+            tools:text="@string/ovenso_lockwater_tip" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

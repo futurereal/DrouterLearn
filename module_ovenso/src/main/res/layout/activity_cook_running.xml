@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@color/cook_running_bgcolor">
+
+        <ImageView
+            android:id="@+id/cookrun_recipebg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:src="@drawable/icon_work_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.viomi.ovenso.view.RotateImage
+            android:id="@+id/cookrun_anim_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cookrun_rotate1"
+            app:layout_constraintBottom_toBottomOf="@id/cookrun_recipebg"
+            app:layout_constraintLeft_toLeftOf="@id/cookrun_recipebg"
+            app:layout_constraintRight_toRightOf="@id/cookrun_recipebg"
+            app:layout_constraintTop_toTopOf="@id/cookrun_recipebg" />
+
+        <com.viomi.ovenso.view.RotateImage
+            android:id="@+id/cookrun_anim_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cookrun_rotate2"
+            app:layout_constraintBottom_toBottomOf="@id/cookrun_recipebg"
+            app:layout_constraintLeft_toLeftOf="@id/cookrun_recipebg"
+            app:layout_constraintRight_toRightOf="@id/cookrun_recipebg"
+            app:layout_constraintTop_toTopOf="@id/cookrun_recipebg" />
+
+        <ImageView
+            android:id="@+id/cookrun_work_imgtip"
+            android:layout_width="292dp"
+            android:layout_height="292dp"
+            android:src="@drawable/icon_working_bg"
+            app:layout_constraintBottom_toBottomOf="@id/cookrun_recipebg"
+            app:layout_constraintLeft_toLeftOf="@id/cookrun_recipebg"
+            app:layout_constraintRight_toRightOf="@id/cookrun_recipebg"
+            app:layout_constraintTop_toTopOf="@id/cookrun_recipebg" />
+
+        <com.viomi.ovenso.view.RoundImageView
+            android:id="@+id/cookrun_recipephoto"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/ovenso_recipebg_margin"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@id/cookrun_recipebg"
+            app:layout_constraintLeft_toLeftOf="@id/cookrun_recipebg"
+            app:layout_constraintRight_toRightOf="@id/cookrun_recipebg"
+            app:layout_constraintTop_toTopOf="@id/cookrun_recipebg"
+            app:sriv_left_bottom_corner_radius="@dimen/ovenso_recipe_radius"
+            app:sriv_left_top_corner_radius="@dimen/ovenso_recipe_radius"
+            app:sriv_right_bottom_corner_radius="@dimen/ovenso_recipe_radius"
+            app:sriv_right_top_corner_radius="@dimen/ovenso_recipe_radius"
+            tools:background="@drawable/dish_id_2" />
+
+        <TextView
+            android:id="@+id/cookrun_lefttime_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:fontFamily="@font/din_cond_bold"
+            android:includeFontPadding="false"
+            android:text="00"
+            android:textColor="@color/color_white_alpha_40"
+            android:textSize="130dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/cookrun_recipebg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cookrun_lefttime_hoursplit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/din_cond_bold"
+            android:includeFontPadding="false"
+            android:text=":"
+            android:textColor="@color/color_white_alpha_40"
+            android:textSize="130dp"
+            app:layout_constraintBottom_toBottomOf="@id/cookrun_lefttime_hour"
+            app:layout_constraintLeft_toRightOf="@id/cookrun_lefttime_hour"
+            app:layout_constraintTop_toTopOf="@id/cookrun_lefttime_hour" />
+
+        <TextView
+            android:id="@+id/cookrun_lefttime_minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/din_cond_bold"
+            android:includeFontPadding="false"
+            android:text="00"
+            android:textColor="@color/color_white_alpha_40"
+            android:textSize="130dp"
+            app:layout_constraintBottom_toBottomOf="@id/cookrun_lefttime_hour"
+            app:layout_constraintLeft_toRightOf="@id/cookrun_lefttime_hoursplit"
+            app:layout_constraintTop_toTopOf="@id/cookrun_lefttime_hour" />
+
+        <TextView
+            android:id="@+id/cookrun_lefttime_minutesplite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/din_cond_bold"
+            android:includeFontPadding="false"
+            android:text=":"
+            android:textColor="@color/color_white_alpha_40"
+            android:textSize="130dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/cookrun_lefttime_hour"
+            app:layout_constraintLeft_toRightOf="@id/cookrun_lefttime_minute"
+            app:layout_constraintTop_toTopOf="@id/cookrun_lefttime_hour" />
+
+        <TextView
+            android:id="@+id/cookrun_lefttime_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/din_cond_bold"
+            android:includeFontPadding="false"
+            android:text="00"
+            android:textColor="@color/color_white_alpha_40"
+            android:textSize="130dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/cookrun_lefttime_hour"
+            app:layout_constraintLeft_toRightOf="@id/cookrun_lefttime_minutesplite"
+            app:layout_constraintTop_toTopOf="@id/cookrun_lefttime_hour" />
+
+
+        <!--目标温度-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cookrun_target_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintLeft_toLeftOf="@id/cookrun_lefttime_hour"
+            app:layout_constraintTop_toBottomOf="@id/cookrun_lefttime_hour" />
+        <!--当前温度-->
+        <TextView
+            android:id="@+id/cookrun_temperature_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+
+            android:fontFamily="@font/din_cond_bold"
+            android:includeFontPadding="false"
+            android:textColor="@color/color_white_alpha_40"
+            android:textSize="36dp"
+            app:layout_constraintBottom_toBottomOf="@id/cookrun_target_temperature"
+            app:layout_constraintLeft_toRightOf="@id/cookrun_target_temperature"
+            app:layout_constraintTop_toTopOf="@id/cookrun_target_temperature" />
+
+        <TextView
+            android:id="@+id/cookrun_temperature_unit"
+            style="@style/font_style_sc_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="4px"
+            android:alpha="0.6"
+            android:includeFontPadding="false"
+            android:text="@string/cook_temperatureunit"
+            android:textColor="@color/color_white_alpha_40"
+            android:textSize="14dp"
+            app:layout_constraintLeft_toRightOf="@id/cookrun_temperature_now"
+            app:layout_constraintTop_toTopOf="@id/cookrun_temperature_now" />
+
+        <TextView
+            android:id="@+id/cookrun_cooktime_title"
+            style="@style/font_style_sc_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:alpha="0.8"
+            android:includeFontPadding="false"
+            android:text="@string/cook_leavetime"
+            android:textColor="@color/white"
+            android:textSize="28dp"
+            app:layout_constraintBottom_toTopOf="@id/cookrun_lefttime_hour"
+            app:layout_constraintLeft_toLeftOf="@id/cookrun_lefttime_hour" />
+
+        <TextView
+            android:id="@+id/cookrun_workstatus"
+            style="@style/font_style_sc_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/gradient_work_stroke_yellow"
+            android:includeFontPadding="false"
+            android:paddingHorizontal="21dp"
+            android:paddingVertical="7dp"
+            android:text="工作中"
+            android:textColor="@color/white"
+            android:textSize="32dp"
+            app:layout_constraintBottom_toTopOf="@id/cookrun_cooktime_title"
+            app:layout_constraintLeft_toLeftOf="@id/cookrun_lefttime_hour" />
+
+        <!--暂停 和开始-->
+        <include
+            android:id="@+id/include_pause_continue"
+            layout="@layout/layout_btn_pausecontinue" />
+
+        <!--结束 和完成-->
+        <include
+            android:id="@+id/include_over_finish"
+            layout="@layout/layout_btn_overfinish" />
+        <!--录像-->
+        <include
+            android:id="@+id/include_record"
+            layout="@layout/layout_btn_recording" />
+
+        <!--测试的布局-->
+        <com.viomi.ovenso.ui.view.CookRunningTestView
+            android:id="@+id/cookrun_testView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

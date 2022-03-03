@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--公共设置页的菜单配置-->
+    <string-array name="menu_water_purifier">
+        <item>head</item>
+        <item>wifi</item>
+        <item>hotspot</item>
+        <item>themeWater</item>
+        <item>temperature</item>
+        <item>cup</item>
+        <item>childLock</item>
+        <item>mineral</item>
+        <item>filter</item>
+        <item>screen</item>
+        <item>date</item>
+        <item>aboutSoft</item>
+    </string-array>
+
+
+    <integer-array name="screenofftime_water">
+        <item>15000</item>
+        <item>30000</item>
+        <item>60000</item>
+        <item>180000</item>
+        <item>2147483647</item>
+    </integer-array>
+    
+</resources>

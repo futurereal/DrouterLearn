@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:background="@color/black">
+
+        <RelativeLayout
+            android:id="@+id/switch_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/color_black_0f"
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/hotspot_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/menuitem_hotspot"
+                android:textColor="@color/color_white"
+                android:textSize="34dp" />
+
+            <com.viomi.ovensocommon.view.SwitchButton
+                android:id="@+id/hotspot_switch"
+                android:layout_width="140dp"
+                android:layout_height="72dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:tintColor="@color/color_green_light" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/hotspot_tip"
+            style="@style/setting_normal_text_style.gray"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="10dp"
+            android:maxEms="18"
+            android:maxLines="3"
+            android:text="@string/setting_hotspot_tips"
+            android:textSize="34dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/switch_panel" />
+
+        <TextView
+            android:id="@+id/hotspot_device_connected"
+            style="@style/setting_normal_text_style"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/setting_hotspot_devices"
+            android:textColor="@color/color_99"
+            android:textSize="34dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/switch_panel" />
+
+        <com.viomi.modulesetting.view.HotspotLoadingView
+            android:id="@+id/hotspot_device_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="50dp"
+            android:src="@drawable/loading_grey"
+            app:layout_constraintBottom_toBottomOf="@id/hotspot_device_connected"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/hotspot_device_connected" />
+
+        <TextView
+            android:id="@+id/hotspot_device_refresh"
+            android:layout_width="92dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/setting_button"
+            android:gravity="center"
+            android:text="@string/wifi_refresh"
+            android:textColor="@color/viomi_green"
+            android:textSize="30dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/hotspot_device_connected"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/hotspot_device_connected" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/refresh_group"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:constraint_referenced_ids="hotspot_device_connected ,hotspot_device_img"
+            tools:visibility="visible" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:background="@color/divider_line_color_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hotspot_device_connected" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

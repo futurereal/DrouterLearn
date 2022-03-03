@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" package="com.viomi.modulesetting">
+
+    <permission android:name="com.viomi.modulesetting.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.viomi.module_setting.permission.MIPUSH_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="com.viomi.device.provider.READ_PERMISSION" />
+    <uses-permission android:name="com.viomi.device.provider.WRITE_PERMISSION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application android:name="com.viomi.modulesetting.ModuleSettingApplicaiton"
+        android:allowBackup="true" android:label="@string/common_setting" android:supportsRtl="true"
+        android:theme="@style/AppTheme" android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning" tools:replace="android:label">
+        <activity android:name="com.viomi.modulesetting.ui.CommonSettingActivity"
+            android:exported="true" android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.viomi.modulesetting.ui.SettingContainerActivity"
+            android:launchMode="standard" />
+        <activity android:name="com.viomi.modulesetting.ui.FactoryTestActivity"
+            android:launchMode="singleTop">
+
+        </activity>
+
+        <activity android:name="com.viomi.modulesetting.ui.ModuleAppActivity"
+            android:launchMode="singleTop" />
+        <service android:name=".service.CommonSetService" />
+    </application>
+
+</manifest>

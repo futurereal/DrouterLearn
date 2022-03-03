@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.viomi.waterpurifier.edison">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <permission
+        android:name="com.viomi.waterpurifier.edison.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.viomi.waterpurifier.edison.permission.MIPUSH_RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.viomi.waterpurifier.edison.ui.WaterMainActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.viomi.waterpurifier.edison.ui.LockScreenActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/LockScreenTheme" />
+        <activity
+            android:name="com.viomi.waterpurifier.edison.ui.WaterAgingActivity"
+            android:launchMode="singleTop" />
+    </application>
+
+</manifest>

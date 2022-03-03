@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CommonSettingTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--开关 Switch-->
+    <declare-styleable name="SwitchButton">
+        <attr name="tintColor" format="reference|color" />
+        <attr name="outerStrokeWidth" format="reference|dimension" />
+        <attr name="shadowSpace" format="reference|dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleIndicator">
+        <attr name="ci_radius" format="dimension" />
+        <attr name="ci_margin" format="dimension" />
+        <attr name="ci_stroke_color" format="color|integer" />
+        <attr name="ci_stroke_size" format="integer|dimension" />
+        <attr name="ci_fill_color" format="color|integer" />
+        <attr name="ci_selected_background" format="color|integer" />
+        <attr name="ci_gravity">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+        <attr name="ci_mode">
+            <enum name="inside" value="0" />
+            <enum name="outside" value="1" />
+            <enum name="solo" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <!-- 设置的标题栏，这里主要是设置文字大小和颜色 -->
+    <declare-styleable name="TitleBar">
+        <attr name="set_title_text" format="string" />
+        <attr name="set_title_text_size" format="dimension" />
+        <attr name="set_title_text_color" format="color" />
+    </declare-styleable>
+
+    <!-- 设置菜单列表的菜单 -->
+    <declare-styleable name="SettingMenuLayout">
+        <!-- 头像大小 -->
+        <attr name="set_menu_avatar_size" format="dimension" />
+        <!-- icon -->
+        <attr name="set_menu_icon" format="reference" />
+        <!-- 文字 -->
+        <attr name="set_menu_text" format="string" />
+        <attr name="set_menu_text_size" format="dimension" />
+        <attr name="set_menu_text_color" format="color" />
+        <!-- 右边状态 -->
+        <attr name="set_menu_status_text" format="string" />
+        <attr name="set_menu_status_text_size" format="dimension" />
+        <attr name="set_menu_status_text_color" format="color" />
+    </declare-styleable>
+
+
+    <style name="setting_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="set_title_text_color">#FFFFFF</item>
+        <item name="set_title_text_size">24dp</item>
+    </style>
+
+    <style name="setting_title_img_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+    </style>
+
+    <style name="setting_title_text_style" parent="@style/font_style_sc_regular">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">24dp</item>
+    </style>
+
+    <style name="setting_menu_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="set_menu_text_color">#FFFFFF</item>
+        <item name="set_menu_text_size">20dp</item>
+        <item name="set_menu_status_text_color">#999999</item>
+        <item name="set_menu_status_text_size">20dp</item>
+        <item name="set_menu_avatar_size">52dp</item>
+    </style>
+
+    <style name="setting_container_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+    <style name="setting_container_horizontal_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">36dp</item>
+        <item name="android:paddingEnd">36dp</item>
+        <item name="android:paddingBottom">20dp</item>
+    </style>
+
+    <style name="setting_container_style_theme" parent="@style/setting_container_style">
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">20dp</item>
+    </style>
+
+    <style name="setting_normal_text_style" parent="@style/font_style_sc_regular">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textSize">40dp</item>
+    </style>
+
+    <style name="setting_normal_text_style.gray">
+        <item name="android:textColor">#999999</item>
+    </style>
+
+    <style name="setting_normal_text_horizontal_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textSize">24dp</item>
+    </style>
+
+    <style name="setting_normal_text_horizontal_style.gray">
+        <item name="android:textColor">#999999</item>
+    </style>
+
+    <style name="setting_normal_text_horizontal_style.fix_height">
+        <item name="android:layout_height">80dp</item>
+    </style>
+
+    <style name="setting_dialogFullScreen" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@color/color_black_alpha_40</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:backgroundDimEnabled">true</item><!-- 模糊 -->
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <style name="activityAnim">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_top</item>
+        <!--     <item name="android:activityCloseEnterAnimation">@anim/slide_in_top</item>
+             <item name="android:activityCloseExitAnimation">@anim/slide_out_bottom</item>-->
+    </style>
+
+    <style name="vlog_tip_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/vlog_tip_text</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+    </style>
+
+    <style name="vlog_date_container_text_style" parent="@style/vlog_tip_text_style">
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:drawableEnd">@drawable/vlog_log_right_arrow</item>
+    </style>
+
+    <style name="vlog_date_container_title_style" parent="@style/vlog_tip_text_style">
+        <item name="android:text">@string/vlog_choose_date</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="vlog_date_container_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/color_green_light</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+    </style>
+
+    <style name="factorytest_button_style">
+        <item name="android:layout_width">280dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:background">@color/color_green_light</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:layout_marginLeft">50dp</item>
+        <item name="android:layout_marginRight">50dp</item>
+        <item name="android:layout_marginTop">50dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">30dp</item>
+    </style>
+
+
+    <style name="factorytest_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginLeft">100dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">30dp</item>
+    </style>
+
+    <style name="setting_normal_text_style.fix_height">
+        <item name="android:layout_height">80dp</item>
+    </style>
+
+    <declare-styleable name="MenuView">
+        <attr name="menuIcon" format="string" />
+        <attr name="menuKey" format="string" />
+        <attr name="menuName" format="string" />
+        <attr name="menuRoutePath" format="string" />
+        <attr name="menuStatus" format="string" />
+    </declare-styleable>
+</resources>

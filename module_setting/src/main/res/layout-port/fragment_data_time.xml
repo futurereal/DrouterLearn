@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/setting_container_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <com.viomi.ovensocommon.view.TitleBar
+            android:id="@+id/datetime_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_black_0f"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:set_title_text="@string/menuitem_datetime" />
+
+        <TextView
+            android:id="@+id/datetime_twenty_title"
+            style="@style/setting_normal_text_style"
+            android:layout_marginVertical="20dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/time_format"
+            app:layout_constraintStart_toStartOf="@id/datetime_title"
+            app:layout_constraintTop_toBottomOf="@id/datetime_title" />
+
+        <com.viomi.ovensocommon.view.SwitchButton
+            android:id="@+id/datatime_twenty_switch"
+            android:layout_width="90dp"
+            android:layout_height="47dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/datetime_twenty_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/datetime_twenty_title"
+            app:tintColor="@color/color_green_light" />
+
+        <TextView
+            android:id="@+id/datatime_auto_title"
+            style="@style/setting_normal_text_style"
+            android:layout_marginVertical="20dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/setting_time_auto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datetime_twenty_title" />
+
+        <com.viomi.ovensocommon.view.SwitchButton
+            android:id="@+id/datatime_auto_switch"
+            android:layout_width="90dp"
+            android:layout_height="47dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/datatime_auto_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/datatime_auto_title"
+            app:tintColor="@color/color_green_light" />
+
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/divider_line_color_black"
+            app:layout_constraintTop_toBottomOf="@+id/datatime_auto_title" />
+
+        <TextView
+            android:id="@+id/datetime_currentdate_title"
+            style="@style/setting_normal_text_style"
+            android:layout_centerVertical="true"
+            android:layout_marginVertical="20dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/time_currentdate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+
+        <TextClock
+            android:id="@+id/datetime_currentdate"
+            style="@style/setting_normal_text_style.gray"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:drawableEnd="@drawable/set_more_white"
+            android:format12Hour="yyyy年MM月dd日"
+            android:format24Hour="yyyy年MM月dd日"
+            app:layout_constraintBottom_toBottomOf="@+id/datetime_currentdate_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/datetime_currentdate_title"
+            tools:text="2022年01月19日" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/divider_line_color_black"
+            app:layout_constraintTop_toBottomOf="@+id/datetime_currentdate_title" />
+
+        <TextView
+            android:id="@+id/datetime_currenttime_title"
+            style="@style/setting_normal_text_style"
+            android:layout_centerVertical="true"
+            android:layout_marginVertical="20dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/time_currenttime"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line2" />
+
+        <com.viomi.ovensocommon.view.EnglishTextClock
+            android:id="@+id/datetime_currenttime"
+            style="@style/setting_normal_text_style.gray"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:drawableEnd="@drawable/set_more_white"
+            app:layout_constraintBottom_toBottomOf="@+id/datetime_currenttime_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/datetime_currenttime_title"
+            tools:text="@string/time_format" />
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/cur_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="line1,line2,datetime_currentdate_title,datetime_currentdate,datetime_currenttime_title,datetime_currenttime" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

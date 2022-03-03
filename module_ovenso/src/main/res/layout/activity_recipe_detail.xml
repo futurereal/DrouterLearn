@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/recipedetail_recipebg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_work_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.viomi.ovenso.view.RoundImageView
+            android:id="@+id/recipedetail_recipephoto"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/ovenso_recipebg_margin"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@id/recipedetail_recipebg"
+            app:layout_constraintLeft_toLeftOf="@id/recipedetail_recipebg"
+            app:layout_constraintRight_toRightOf="@id/recipedetail_recipebg"
+            app:layout_constraintTop_toTopOf="@id/recipedetail_recipebg"
+            app:sriv_left_bottom_corner_radius="@dimen/ovenso_recipe_radius"
+            app:sriv_left_top_corner_radius="@dimen/ovenso_recipe_radius"
+            app:sriv_right_bottom_corner_radius="@dimen/ovenso_recipe_radius"
+            app:sriv_right_top_corner_radius="@dimen/ovenso_recipe_radius"
+            tools:background="@drawable/dish_id_2" />
+
+        <RadioGroup
+            android:id="@+id/recipedetail_grouptitle"
+            android:layout_width="wrap_content"
+            android:layout_height="76dp"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toRightOf="@id/recipedetail_recipebg"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/recipedetail_materialtitle"
+                style="@style/font_style_sc_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:alpha="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawableBottom="@drawable/check_group_shader"
+                android:gravity="center"
+                android:text="@string/recipe_material"
+                android:textColor="@color/check_white_ff_e7"
+                android:textSize="32dp" />
+
+            <RadioButton
+                android:id="@+id/recipedetail_methodtitle"
+                style="@style/font_style_sc_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="138dp"
+                android:alpha="0.8"
+                android:button="@null"
+                android:checked="false"
+                android:drawableBottom="@drawable/check_group_shader"
+                android:gravity="center"
+                android:text="@string/make_method"
+                android:textColor="@color/check_white_ff_e7"
+                android:textSize="32dp" />
+        </RadioGroup>
+
+        <com.viomi.ovenso.view.ScrollListenView
+            android:id="@+id/recipedetail_groupcontent"
+            android:layout_width="500dp"
+            android:layout_height="500dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="50dp"
+            android:fadingEdge="vertical"
+            android:fadingEdgeLength="88dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:scrollbarSize="5dp"
+            android:scrollbars="vertical"
+            app:layout_constraintLeft_toRightOf="@id/recipedetail_recipebg"
+            app:layout_constraintRight_toLeftOf="@id/include_start"
+            app:layout_constraintTop_toBottomOf="@id/recipedetail_grouptitle">
+
+            <TextView
+                android:id="@+id/recipedetail_tvcontent"
+                style="@style/font_style_sc_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.7"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                tools:text="adngiandiganidnaifjiadjfdas" />
+
+        </com.viomi.ovenso.view.ScrollListenView>
+
+        <View
+            android:id="@+id/topShader"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:background="@drawable/topshader"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="@id/recipedetail_groupcontent"
+            app:layout_constraintRight_toRightOf="@id/recipedetail_groupcontent"
+            app:layout_constraintTop_toTopOf="@id/recipedetail_groupcontent"
+            tools:visibility="visible" />
+
+        <View
+            android:id="@+id/bottomShader"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:background="@drawable/bottomshader"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/recipedetail_groupcontent"
+            app:layout_constraintLeft_toLeftOf="@id/recipedetail_groupcontent"
+            app:layout_constraintRight_toRightOf="@id/recipedetail_groupcontent"
+            tools:visibility="visible" />
+        <!--自定义菜谱-->
+        <TextView
+            android:id="@+id/recipedetail_totaltime"
+            style="@style/text_white_normal"
+            android:fontFamily="@font/din_cond_bold"
+            android:textSize="138dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/recipedetail_recipebg"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="03:00" />
+
+        <TextView
+            android:id="@+id/cookrun_cooktime_title"
+            style="@style/text_white_normal"
+            android:alpha="0.8"
+            android:textSize="28dp"
+            app:layout_constraintBottom_toTopOf="@id/recipedetail_totaltime"
+            app:layout_constraintLeft_toLeftOf="@id/recipedetail_totaltime" />
+
+        <TextView
+            android:id="@+id/recipedetail_cooktemp"
+            style="@style/text_white_normal"
+            android:textSize="36dp"
+            app:layout_constraintLeft_toLeftOf="@id/recipedetail_totaltime"
+            app:layout_constraintTop_toBottomOf="@id/recipedetail_totaltime"
+            tools:text="预设温度：100" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/recipedetail_cookgroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="cookrun_cooktime_title,recipedetail_cooktemp,recipedetail_totaltime"
+            tools:visibility="gone" />
+
+
+        <include
+            android:id="@+id/include_start"
+            layout="@layout/layout_btn_start" />
+
+        <include
+            android:id="@+id/include_appoint"
+            layout="@layout/layout_btn_appoint" />
+
+        <include
+            android:id="@+id/include_collect"
+            layout="@layout/layout_btn_collect" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

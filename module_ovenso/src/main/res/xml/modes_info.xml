@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cook_modes xmlns:ovenso="http://schemas.android.com/apk/res/com.viomi.ovenso.microwave">
+    <!-- so7 http://schemas.android.com/apk/res/com.viomi.ovenso.microwave-->
+    <!-- so7 http://schemas.android.com/apk/res/com.viomi.ovenso.microwave.test-->
+    <!-- so6 http://schemas.android.com/apk/res/com.viomi.ovenso-->
+
+    <!--    微波功能传：模式、微波时间、微波火力
+        蒸功能传：模式、蒸时间、蒸温度，
+        烤功能传：模式、烤时间、烤温度
+        微波蒸传：模式、蒸时间
+        微蒸烤传：模式、蒸时间、蒸温度、烤时间、烤温度
+        双动力烤传：模式、烤时间、烤温度
+        发酵：模式、蒸时间、蒸温度
+        消毒：模式
+        解冻：模式、烤时间
+        保温：模式、烤时间、烤温度
+        除垢：模式
+        清洁：模式、蒸时间
+        烘干：模式、烤时间、烤温度
+        除味：模式-->
+    <mode
+        ovenso:cookType="蒸"
+        ovenso:firepowerDefine="38"
+        ovenso:firepowerRangeMax="50"
+        ovenso:firepowerRangeMin="35"
+        ovenso:iconBig="mode_fj"
+        ovenso:iconSmall="ic_fajiao"
+        ovenso:modeId="13"
+        ovenso:modeKey="ferment"
+        ovenso:modeName="发酵"
+        ovenso:timeDefine="60"
+        ovenso:timeRangeMax="120"
+        ovenso:timeRangeMin="20" />
+    <mode
+        ovenso:cookType="单模式"
+        ovenso:firepowerDefine="100"
+        ovenso:firepowerDefineTwo="125"
+        ovenso:iconBig="mode_xiaodu"
+        ovenso:iconSmall="mode_xiaodu_icon"
+        ovenso:modeId="30"
+        ovenso:modeKey="disinfect"
+        ovenso:modeName="高温消毒"
+        ovenso:timeDefine="60" />
+    <mode
+        ovenso:cookType="烤"
+        ovenso:firepowerRangeMax="-1"
+        ovenso:iconBig="mode_jd"
+        ovenso:iconSmall="ic_jiedong"
+        ovenso:modeId="15"
+        ovenso:modeKey="unfreeze"
+        ovenso:modeName="解冻"
+        ovenso:timeDefine="20"
+        ovenso:timeRangeMax="120"
+        ovenso:timeRangeMin="10" />
+    <mode
+        ovenso:cookType="烤"
+        ovenso:firepowerDefine="60"
+        ovenso:firepowerRangeMax="80"
+        ovenso:firepowerRangeMin="60"
+        ovenso:iconBig="mode_bw"
+        ovenso:iconSmall="ic_baowen"
+        ovenso:modeId="31"
+        ovenso:modeKey="warm"
+        ovenso:modeName="保温"
+        ovenso:timeDefine="20"
+        ovenso:timeRangeMax="120"
+        ovenso:timeRangeMin="10" />
+    <mode
+        ovenso:cookType="蒸"
+        ovenso:firepowerDefine="80"
+        ovenso:iconBig="ic_discalling"
+        ovenso:iconSmall="ic_discalling_tip"
+        ovenso:modeId="40"
+        ovenso:modeKey="descaling"
+        ovenso:modeName="除垢"
+        ovenso:timeDefine="65" />
+    <mode
+        ovenso:cookType="蒸"
+        ovenso:firepowerDefine="60"
+        ovenso:firepowerRangeMax="-1"
+        ovenso:iconBig="mode_qj"
+        ovenso:iconSmall="ic_qingjie"
+        ovenso:modeId="33"
+        ovenso:modeKey="clean"
+        ovenso:modeName="清洁"
+        ovenso:timeDefine="30"
+        ovenso:timeRangeMax="120"
+        ovenso:timeRangeMin="30" />
+    <mode
+        ovenso:cookType="烤"
+        ovenso:firepowerDefine="100"
+        ovenso:firepowerRangeMax="120"
+        ovenso:firepowerRangeMin="80"
+        ovenso:iconBig="ic_assis_dry"
+        ovenso:iconSmall="ic_assisdry_tip"
+        ovenso:modeId="41"
+        ovenso:modeKey="dry"
+        ovenso:modeName="烘干"
+        ovenso:timeDefine="20"
+        ovenso:timeRangeMax="30"
+        ovenso:timeRangeMin="10" />
+
+    <mode
+        ovenso:cookType="单模式"
+        ovenso:firepowerDefine="100"
+        ovenso:firepowerDefineTwo="230"
+        ovenso:iconBig="ic_assis_deodorize"
+        ovenso:iconSmall="ic_assisdeodorize_tip"
+        ovenso:modeId="42"
+        ovenso:modeKey="removal"
+        ovenso:modeName="除味"
+        ovenso:timeDefine="20" />
+
+    <mode
+        ovenso:cookType="烤"
+        ovenso:firepowerDefine="180"
+        ovenso:firepowerRangeMax="230"
+        ovenso:firepowerRangeMin="35"
+        ovenso:iconBig="mode_yr"
+        ovenso:iconSmall="ic_yure"
+        ovenso:modeId="16"
+        ovenso:modeKey="preheat"
+        ovenso:modeName="预热" />
+    <mode
+        ovenso:cookType="蒸"
+        ovenso:firepowerDefine="100"
+        ovenso:firepowerRangeMax="50"
+        ovenso:firepowerRangeMin="100"
+        ovenso:iconBig="mode_rc"
+        ovenso:iconSmall="ic_recai"
+        ovenso:modeId="32"
+        ovenso:modeKey="hotDish"
+        ovenso:modeName="热菜"
+        ovenso:timeDefine="10"
+        ovenso:timeRangeMax="60"
+        ovenso:timeRangeMin="5" />
+    <mode
+        ovenso:cookType="微波"
+        ovenso:firepowerDefine="3"
+        ovenso:firepowerRangeMax="5"
+        ovenso:firepowerRangeMin="1"
+        ovenso:iconBig="mode_micro"
+        ovenso:iconBigCombine="mode_micro_combine"
+        ovenso:iconSmall="mode_micro_icon"
+        ovenso:modeId="34"
+        ovenso:modeKey="micro"
+        ovenso:modeName="微波"
+        ovenso:timeDefine="1"
+        ovenso:timeRangeMax="60"
+        ovenso:timeRangeMin="0.5" />
+
+    <mode
+        ovenso:cookType="蒸"
+        ovenso:firepowerDefine="100"
+        ovenso:firepowerRangeMax="100"
+        ovenso:firepowerRangeMin="35"
+        ovenso:iconBig="mode_cz"
+        ovenso:iconSmall="ic_chunzheng"
+        ovenso:modeId="26"
+        ovenso:modeKey="streamOnly"
+        ovenso:modeName="纯蒸"
+        ovenso:timeDefine="10"
+        ovenso:timeRangeMax="120"
+        ovenso:timeRangeMin="5" />
+    
+    <mode
+        ovenso:cookType="蒸"
+        ovenso:firepowerDefine="110"
+        ovenso:firepowerRangeMax="110"
+        ovenso:firepowerRangeMin="100"
+        ovenso:iconBig="mode_gwz"
+        ovenso:iconBigCombine="mode_gwz_combine"
+        ovenso:iconSmall="ic_seven_gaowenzheng"
+        ovenso:modeId="1"
+        ovenso:modeKey="steamHigh"
+        ovenso:modeName="高温蒸"
+        ovenso:timeDefine="10"
+        ovenso:timeRangeMax="120"
+        ovenso:timeRangeMin="5" />
+    <mode
+        ovenso:cookType="蒸"
+        ovenso:firepowerDefine="100"
+        ovenso:firepowerRangeMax="100"
+        ovenso:firepowerRangeMin="35"
+        ovenso:iconBig="ic_gas_stream"
+        ovenso:iconBigCombine="ic_gas_stream_combine"
+        ovenso:iconSmall="ic_gas_stream_tip"
+        ovenso:modeId="35"
+        ovenso:modeKey="streamGas"
+        ovenso:modeName="原汽蒸"
+        ovenso:timeDefine="10"
+        ovenso:timeRangeMax="120"
+        ovenso:timeRangeMin="5" />
+
+    <mode
+        ovenso:cookType="蒸"
+        ovenso:firepowerDefine="2"
+        ovenso:firepowerDefineTwo="100"
+        ovenso:iconBig="ic_micr_stream"
+        ovenso:iconBigCombine="mode_gwz_combine"
+        ovenso:iconSmall="ic_micr_stream_tip"
+        ovenso:modeId="37"
+        ovenso:modeKey="microStream"
+        ovenso:modeName="微波蒸"
+        ovenso:timeDefine="10"
+        ovenso:timeRangeMax="99"
+        ovenso:timeRangeMin="5" />
+
+    <mode
+        ovenso:cookType="烤"
+        ovenso:firepowerDefine="180"
+        ovenso:firepowerRangeMax="230"
+        ovenso:firepowerRangeMin="100"
+        ovenso:iconBig="mode_rfk"
+        ovenso:iconBigCombine="mode_rfk_combine"
+        ovenso:iconSmall="ic_seven_refengkao"
+        ovenso:modeId="17"
+        ovenso:modeKey="bakeHot"
+        ovenso:modeName="热风烤"
+        ovenso:timeDefine="10"
+        ovenso:timeRangeMax="120"
+        ovenso:timeRangeMin="5" />
+
+    <mode
+        ovenso:cookType="烤"
+        ovenso:firepowerDefine="180"
+        ovenso:firepowerRangeMax="230"
+        ovenso:firepowerRangeMin="35"
+        ovenso:iconBig="mode_fsk"
+        ovenso:iconSmall="ic_fengshankao"
+        ovenso:modeId="21"
+        ovenso:modeKey="bakeFan"
+        ovenso:modeName="风扇烤"
+        ovenso:timeDefine="10"
+        ovenso:timeRangeMax="120"
+        ovenso:timeRangeMin="3" />
+
+    <mode
+        ovenso:cookType="烤"
+        ovenso:firepowerDefine="180"
+        ovenso:firepowerRangeMax="230"
+        ovenso:firepowerRangeMin="35"
+        ovenso:iconBig="mode_qsk"
+        ovenso:iconSmall="ic_qiangshaokao"
+        ovenso:modeId="19"
+        ovenso:modeKey="bakeStrong"
+        ovenso:modeName="强烧烤"
+        ovenso:timeDefine="10"
+        ovenso:timeRangeMax="120"
+        ovenso:timeRangeMin="3" />
+    <mode
+        ovenso:cookType="烤"
+        ovenso:firepowerDefine="180"
+        ovenso:firepowerRangeMax="230"
+        ovenso:firepowerRangeMin="100"
+        ovenso:iconBig="mode_fpk"
+        ovenso:iconBigCombine="mode_fpk_combine"
+        ovenso:iconSmall="ic_fengpeikao"
+        ovenso:modeId="27"
+        ovenso:modeKey="bakeWind"
+        ovenso:modeName="风焙烤"
+        ovenso:timeDefine="10"
+        ovenso:timeRangeMax="120"
+        ovenso:timeRangeMin="5" />
+
+    <mode
+        ovenso:cookType="烤"
+        ovenso:firepowerDefine="180"
+        ovenso:firepowerRangeMax="230"
+        ovenso:firepowerRangeMin="100"
+        ovenso:iconBig="mode_kqz"
+        ovenso:iconBigCombine="mode_kqz_combine"
+        ovenso:iconSmall="ic_fengpeikao"
+        ovenso:modeId="36"
+        ovenso:modeKey="airBomb"
+        ovenso:modeName="空气炸"
+        ovenso:timeDefine="10"
+        ovenso:timeRangeMax="120"
+        ovenso:timeRangeMin="5" />
+
+    <mode
+        ovenso:cookType="烤"
+        ovenso:firepowerDefine="180"
+        ovenso:firepowerRangeMax="230"
+        ovenso:firepowerRangeMin="100"
+        ovenso:iconBig="mode_ck"
+        ovenso:iconBigCombine="mode_sk_combine"
+        ovenso:iconSmall="ic_chuankao"
+        ovenso:modeId="20"
+        ovenso:modeKey="bakeLight"
+        ovenso:modeName="烧烤"
+        ovenso:timeDefine="10"
+        ovenso:timeRangeMax="120"
+        ovenso:timeRangeMin="5" />
+    <mode
+        ovenso:cookType="烤"
+        ovenso:firepowerDefine="180"
+        ovenso:firepowerRangeMax="230"
+        ovenso:firepowerRangeMin="100"
+        ovenso:iconBig="mode_zqk"
+        ovenso:iconSmall="ic_zhengqikao"
+        ovenso:modeId="28"
+        ovenso:modeKey="bakeStream"
+        ovenso:modeName="蒸汽烤"
+        ovenso:timeDefine="20"
+        ovenso:timeRangeMax="120"
+        ovenso:timeRangeMin="5" />
+    <mode
+        ovenso:cookType="烤"
+        ovenso:firepowerDefine="180"
+        ovenso:firepowerRangeMax="230"
+        ovenso:firepowerRangeMin="100"
+        ovenso:iconBig="mode_cuikao"
+        ovenso:iconBigCombine="mode_cuikao_combine"
+        ovenso:iconSmall="ic_cuikao"
+        ovenso:modeId="24"
+        ovenso:modeKey="bakeBrittle"
+        ovenso:modeName="脆烤"
+        ovenso:timeDefine="10"
+        ovenso:timeRangeMax="120"
+        ovenso:timeRangeMin="5" />
+
+    <mode
+        ovenso:cookType="烤"
+        ovenso:firepowerDefine="180"
+        ovenso:firepowerRangeMax="230"
+        ovenso:firepowerRangeMin="100"
+        ovenso:iconBig="mode_nk"
+        ovenso:iconBigCombine="mode_nk_combine"
+        ovenso:iconSmall="ic_seven_nengkao"
+        ovenso:modeId="25"
+        ovenso:modeKey="bakeTender"
+        ovenso:modeName="嫩烤"
+        ovenso:timeDefine="10"
+        ovenso:timeRangeMax="120"
+        ovenso:timeRangeMin="5" />
+    <!--双动力烤是微波和烤同时工作，所以默认为烤-->
+    <mode
+        ovenso:cookType="烤"
+        ovenso:firepowerDefine="100"
+        ovenso:firepowerRangeMax="230"
+        ovenso:firepowerRangeMin="100"
+        ovenso:iconBig="mode_combined"
+        ovenso:iconSmall="mode_combined_icon"
+        ovenso:modeId="39"
+        ovenso:modeKey="doubleBake"
+        ovenso:modeName="双动力烤"
+        ovenso:timeDefine="10"
+        ovenso:timeRangeMax="120"
+        ovenso:timeRangeMin="5" />
+    <mode
+        ovenso:cookType="添加"
+        ovenso:iconBig="custommode_add"
+        ovenso:iconBigCombine="custommode_add"
+        ovenso:modeId="99"
+        ovenso:modeKey="addMode"
+        ovenso:modeName="添加模式" />
+
+    <combinemode
+        ovenso:childModeIdList="@array/modeid_custome"
+        ovenso:cookType="DIY"
+        ovenso:iconBig="mode_custom"
+        ovenso:iconSmall="mode_custom_icon"
+        ovenso:modeId="201"
+        ovenso:modeKey="modeCustom"
+        ovenso:modeName="自定义模式" />
+
+    <!--配合微蒸烤定义的模式-->
+    <mode
+        ovenso:cookType="蒸"
+        ovenso:firepowerDefine="100"
+        ovenso:iconBig="ic_gas_stream"
+        ovenso:iconBigCombine="ic_gas_stream_combine"
+        ovenso:iconSmall="ic_gas_stream_tip"
+        ovenso:modeId="200"
+        ovenso:modeKey="streamGas"
+        ovenso:modeName="微蒸烤原汽蒸"
+        ovenso:timeDefine="5"
+        ovenso:timeRangeMax="99"
+        ovenso:timeRangeMin="5" />
+
+    <!--<多个模式-->
+    <!--微蒸烤传：模式、蒸时间、蒸温度、烤时间、烤温度-->
+    <combinemode
+        ovenso:childModeIdList="@array/modeid_microstreambake"
+        ovenso:cookType="组合"
+        ovenso:iconBig="mode_combined"
+        ovenso:iconSmall="mode_combined_icon"
+        ovenso:modeId="38"
+        ovenso:modeKey="microStreamBake"
+        ovenso:modeName="微蒸烤" />
+    <mode
+        ovenso:cookType="蒸"
+        ovenso:firepowerDefine="100"
+        ovenso:modeId="101"
+        ovenso:modeKey="removalStream"
+        ovenso:modeName="除味蒸"
+        ovenso:timeDefine="5" />
+    <mode
+        ovenso:cookType="烤"
+        ovenso:firepowerDefine="230"
+        ovenso:modeId="102"
+        ovenso:modeKey="removalBake"
+        ovenso:modeName="除味烤"
+        ovenso:timeDefine="15" />
+
+
+</cook_modes>

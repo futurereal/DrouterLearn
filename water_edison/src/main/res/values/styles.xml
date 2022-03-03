@@ -1,0 +1,52 @@
+<resources>
+
+    <style name="activityAnimMain">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_top</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_bottom</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_top</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+    <style name="LockScreenTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/color_black_alpha_80</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/activityAnimLock</item>
+    </style>
+
+    <style name="activityAnimLock">
+        <item name="android:activityOpenEnterAnimation">@anim/show</item>
+        <item name="android:activityOpenExitAnimation">@anim/disappear</item>
+        <item name="android:activityCloseEnterAnimation">@anim/show</item>
+        <item name="android:activityCloseExitAnimation">@anim/disappear</item>
+    </style>
+
+    <style name="factorytest_button_style">
+        <item name="android:layout_width">280dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:background">@color/color_green_light</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:layout_marginLeft">50dp</item>
+        <item name="android:layout_marginRight">50dp</item>
+        <item name="android:layout_marginTop">50dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">30dp</item>
+    </style>
+
+
+    <style name="factorytest_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginLeft">100dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">30dp</item>
+    </style>
+</resources>

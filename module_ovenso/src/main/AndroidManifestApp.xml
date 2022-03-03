@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.viomi.ovenso.microwave">
+
+    <permission
+        android:name="com.viomi.ovenso.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.viomi.ovenso.permission.MIPUSH_RECEIVE" />
+    <uses-permission android:name="android.permission.CUSTOM_START_SETTINGS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 读取联系人权限，上传联系人需要用到此权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- 配置权限，用来记录应用配置信息 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 相机相关的 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- A camera with burst capability is required to use this application -->
+    <uses-feature android:name="android.hardware.camera.any" />
+
+    <application
+        android:name="com.viomi.ovenso.OvenApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name_ovenso"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:label">
+        <activity
+            android:name="com.viomi.ovenso.ui.activity.main.OvenMainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            tools:node="merge" />
+
+        <activity
+            android:name="com.viomi.ovenso.ui.activity.ModeListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name="com.viomi.ovenso.ui.activity.custommode.CustomModeActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.viomi.ovenso.ui.activity.RecipeListActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.viomi.ovenso.ui.activity.MyRecipeActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.viomi.ovenso.ui.activity.RecipeDetailActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.viomi.ovenso.ui.activity.ModeDetailActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.viomi.ovenso.ui.activity.running.CookRunningActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.viomi.ovenso.ui.activity.MessageListActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.viomi.ovenso.ui.activity.ScreenOffActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/TranslucentTheme" />
+
+        <activity
+            android:name="com.viomi.ovenso.test.OvenTestActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            tools:node="merge">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

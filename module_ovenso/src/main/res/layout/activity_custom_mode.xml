@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@color/black">
+
+        <TextView
+            android:id="@+id/custommode_maintip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="34dp"
+            android:text="@string/custommode_tip"
+            android:textColor="@color/color_white_alpha_60"
+            android:textSize="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_custommode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/custommode_maintip"
+            app:layout_constraintTop_toBottomOf="@id/custommode_maintip"
+            tools:context="com.viomi.ovenso.ui.activity.custommode.CustomModeActivity" />
+
+        <!--开始-->
+        <include
+            android:id="@+id/include_start"
+            layout="@layout/layout_btn_start" />
+        <!--预约-->
+        <include
+            android:id="@+id/include_appoint"
+            layout="@layout/layout_btn_appoint" />
+
+        <include
+            android:id="@+id/include_collect"
+            layout="@layout/layout_btn_collect"
+            android:visibility="gone" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

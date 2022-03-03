@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/err_toast_bg"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="8dp">
+
+        <ImageView
+            android:id="@+id/messagetip_imgtip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/toast_loading"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/messagetip_titletip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:lines="1"
+            android:textColor="@color/white"
+            android:textSize="36dp"
+            app:layout_constraintBottom_toBottomOf="@id/messagetip_imgtip"
+            app:layout_constraintLeft_toRightOf="@id/messagetip_imgtip"
+            app:layout_constraintTop_toTopOf="@id/messagetip_imgtip" />
+
+        <View
+            android:id="@+id/messagetip_line"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/err_toast_divider"
+            app:layout_constraintBottom_toBottomOf="@id/messagetip_imgtip"
+            app:layout_constraintLeft_toRightOf="@id/messagetip_titletip"
+            app:layout_constraintRight_toLeftOf="@id/messagetip_content"
+            app:layout_constraintTop_toTopOf="@id/messagetip_imgtip" />
+
+        <TextView
+            android:id="@+id/messagetip_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:textColor="@color/color_orange"
+            android:textSize="36dp"
+            app:layout_constraintBottom_toBottomOf="@id/messagetip_imgtip"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/messagetip_imgtip" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="WheelPicker">
+        <attr name="wheel_data" format="reference" />
+        <attr name="wheel_selected_item_position" format="integer" />
+        <attr name="wheel_item_text_size" format="dimension" />
+        <attr name="wheel_item_text_color" format="color" />
+        <attr name="wheel_selected_item_text_color" format="color" />
+        <attr name="wheel_same_width" format="boolean" />
+        <attr name="wheel_maximum_width_text" format="string" />
+        <attr name="wheel_maximum_width_text_position" format="integer" />
+        <attr name="wheel_visible_item_count" format="integer" />
+        <attr name="wheel_item_space" format="dimension" />
+        <attr name="wheel_cyclic" format="boolean" />
+        <attr name="wheel_indicator" format="boolean" />
+        <attr name="wheel_indicator_color" format="color" />
+        <attr name="wheel_indicator_size" format="dimension" />
+        <attr name="wheel_curtain" format="boolean" />
+        <attr name="wheel_curtain_color" format="color" />
+        <attr name="wheel_atmospheric" format="boolean" />
+        <attr name="wheel_curved" format="boolean" />
+        <attr name="wheel_item_align" format="enum">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+        <attr name="wheel_font_path" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="circle_progressview">
+        <attr name="android:text" />
+        <attr name="android:textSize" />
+        <attr name="android:textColor" />
+        <attr name="android:drawablePadding" />
+        <attr name="outer_tip" format="string" />
+        <attr name="texttip_unit" format="string" />
+        <attr name="outer_tip_size" format="integer" />
+        <attr name="outer_tip_color" format="color" />
+        <attr name="drawable_srcid" format="reference|color" />
+        <attr name="inner_color" format="color" />
+        <attr name="inner_style" format="reference" />
+        <attr name="inner_progress_tip" format="string" />
+        <attr name="inner_progresstip_color" format="color" />
+        <attr name="inner_progresstip_unit" format="string" />
+        <attr name="inner_progress_color" format="color" />
+        <attr name="outer_visible" format="boolean" />
+        <attr name="outer_start_color" format="color" />
+        <attr name="outer_end_color" format="color" />
+        <attr name="circle_width" format="dimension" />
+        <attr name="progress_max" format="integer" />
+        <attr name="progress_current" format="float" />
+        <attr name="start_angle_degree" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="CirclePercentBar">
+        <attr name="arcColor" format="color"/>
+        <attr name="arcWidth" format="dimension"/>
+        <attr name="centerTextColor" format="color"/>
+        <attr name="centerTextSize" format="dimension"/>
+        <attr name="circleRadius" format="dimension"/>
+        <attr name="arcStartColor" format="color"/>
+        <attr name="arcEndColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="dotslayout">
+        <attr name="dot_count" format="integer" />
+        <attr name="dot_index" format="integer" />
+    </declare-styleable>
+</resources>

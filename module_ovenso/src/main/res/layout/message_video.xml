@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_basetitle_bg"
+        android:paddingLeft="30dp"
+        android:paddingRight="37dp">
+
+        <TextView
+            android:id="@+id/video_title"
+            style="@style/font_style_sc_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/oven_common_waterbox" />
+
+        <TextView
+            android:id="@+id/video_time"
+            style="@style/font_style_sc_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:textColor="@color/messagefault_time"
+            android:textSize="24dp"
+            app:layout_constraintBottom_toBottomOf="@id/video_title"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/video_title"
+            tools:text="2020.10.10" />
+
+        <TextView
+            android:id="@+id/video_content"
+            style="@style/font_style_sc_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/color_4c_90"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="@id/video_title"
+            app:layout_constraintTop_toBottomOf="@id/video_title"
+            tools:text="@string/error_cavity_high_content" />
+        <!--botton to Parent 无效-->
+        <Button
+            android:id="@+id/video_delete"
+            android:layout_width="272dp"
+            android:layout_height="94dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginBottom="47dp"
+            android:background="@drawable/shape_gray_btn_bg"
+            android:text="@string/ovenso_delete"
+            android:textColor="@color/delete_text_red"
+            android:textSize="34dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/video_upload"
+            app:layout_constraintTop_toBottomOf="@id/video_content" />
+
+        <Button
+            android:id="@+id/video_upload"
+            android:layout_width="272dp"
+            android:layout_height="94dp"
+            android:layout_marginLeft="26dp"
+            android:background="@drawable/shape_green_btn"
+            android:text="@string/upload_again"
+            android:textColor="@color/white"
+            android:textSize="34dp"
+            app:layout_constraintBottom_toBottomOf="@id/video_delete"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toRightOf="@id/video_delete"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/video_delete" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

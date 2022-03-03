@@ -1,0 +1,284 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
+    <string name="app_name_zh">净水器ERO</string>
+    <string name="machine_name">AI矿物质净饮机</string>
+
+    <string name="select_mode">模式</string>
+    <string name="water_out">出水</string>
+    <string name="water_out_stop">停止</string>
+
+    <string name="wlan_connect_title">联网享受更多智能体验</string>
+    <string name="skip">跳过</string>
+    <string name="finish">完成</string>
+    <string name="input_pwd">输入密码</string>
+    <string name="input_tips">提示</string>
+    <string name="input_pwd_hint">请输入密码</string>
+    <string name="cancel">取消</string>
+    <string name="sure">确定</string>
+    <string name="connect_success">连接成功</string>
+    <string name="connect_fail">密码错误，连接失败</string>
+
+    <string name="normal_temp">常温</string>
+    <string name="custom_temp">自定义</string>
+    <string name="water_warm">温水</string>
+    <string name="water_hot">热水</string>
+    <string name="water_boiling">开水</string>
+
+    <string name="warn_title">警告</string>
+    <string name="iknow">我知道了</string>
+    <string name="firmware_update_tips">固件升级中，请勿断电，等待升级完毕再使用</string>
+
+    <string name="filter_title">碳棒滤芯</string>
+    <string name="filter_reset">我已安装新滤芯，立即重置</string>
+    <string name="filter_buynow">立即购买</string>
+    <string name="error_41">4in1滤芯即将到期，剩余</string>
+    <string name="error_41_1">4in1滤芯已到期</string>
+    <string name="error_ro">碳棒滤芯即将到期，剩余</string>
+    <string name="error_ro_1">碳棒滤芯已到期</string>
+    <string name="error_filter_1eft">剩余 %d</string>
+    <string name="resetting">重置完成</string>
+    <string name="message_center">消息中心</string>
+    <string name="cup_full">杯满即停</string>
+    <string name="cup_small">小杯</string>
+    <string name="cup_middle">中杯</string>
+    <string name="cup_big">大杯</string>
+    <string name="cup_keep_out">连续出水</string>
+    <string name="cup_ai">AI</string>
+
+    <string name="mineral_water">矿物质水</string>
+    <string name="purified_water">纯净水</string>
+    <string name="changing_skip_tip">点击跳过，后台持续切换</string>
+    <string name="countdown">倒计时</string>
+
+
+    <string name="unit_temperature">℃</string>
+    <string name="unit_flow">ml</string>
+
+    <string name="dialog_change_water_tip">确定要切换水质么？</string>
+    <string name="dialog_change_water_text">切换</string>
+    <string name="toast_change_water_tip">水质切换成功</string>
+    <string name="toast_change_water_error_tip">下发切换水质指令不成功，请稍后重试</string>
+
+    <string name="clean_tip">s 后开启自动清洁</string>
+    <string name="ready_to_clean_tip">119s后开启自动清洁,清洁状态时将无法操作</string>
+    <string name="self_clean_tip">自动清洁中，暂不能操作</string>
+    <string name="self_clean_succeed_tip">自清洁成功</string>
+
+
+    <string name="fridge_open_alarm_time_default">00:00</string>
+    <string name="setting_title">设置</string>
+
+    <string name="never_login">未登录</string>
+    <string name="login_now">立即登录</string>
+    <string name="head_label">头像</string>
+    <string name="name_label">昵称</string>
+    <string name="viomi_no_label">用户ID</string>
+    <string name="logout_now">退出登录</string>
+    <string name="mi_iot_account">米家账号</string>
+    <string name="mi_iot_no_bind">未绑定</string>
+    <string name="mi_iot_has_bind">已绑定</string>
+    <string name="login_quit">退出账号</string>
+    <string name="logout_message">是否退出当前账号？</string>
+    <string name="mi_iot_unbind_message">设备解绑同时注销账号登录，是否解绑？</string>
+    <string name="experience_app">去APP体验更多操作</string>
+    <string name="login_title">扫码登录</string>
+    <string name="use_tips">如何使用？</string>
+    <string name="viomi_login_scan_tips">请使用云米商城app扫码登录</string>
+    <string name="mijia_login_scan_tips">请使用米家app扫码登录</string>
+    <string name="login_error_tip">登录超时，请重新扫码</string>
+    <string name="logining">正在登录</string>
+    <string name="retry_load_qrcode">重新获取</string>
+    <string name="how_to_use">如何使用</string>
+    <string name="go_back">返回</string>
+    <string name="app_qrcode_text">没有云米商城APP？扫描上方二维码下载</string>
+
+    <string name="wifi_switch">WLAN开关</string>
+    <string name="wifi_connected_title">已匹配可用的WLAN</string>
+    <string name="wifi_nearby">附近的WLAN</string>
+    <string name="wifi_refresh">刷新</string>
+
+    <string name="status_connected">已连接</string>
+    <string name="status_connecting">正在连接…</string>
+    <string name="status_unconnected">未连接</string>
+
+    <string name="wifi_cancle">取消</string>
+    <string name="wifi_joinin">加入</string>
+    <string name="wifi_close">关闭</string>
+    <string name="wifi_forget_pwd_title">重要提示</string>
+    <string name="wifi_ignore_netword">忽略此网络</string>
+
+    <string name="time_format">00:00</string>
+    <string name="time_currentdate">当前日期</string>
+    <string name="time_currenttime">当前时间</string>
+    <string name="management_time_date">%1$s年%2$s月%3$s日</string>
+    <string name="morning">上午</string>
+    <string name="noon">中午</string>
+    <string name="afternoon">下午</string>
+    <string name="time_cancel">取消</string>
+    <string name="time_sure">确定</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+    <string name="minute">分钟</string>
+    <string name="known">知道了</string>
+
+    <string name="sound_screen_brightness">屏幕亮度</string>
+    <string name="sound_stanby_time">自动熄屏</string>
+    <string name="sound_media_close">关闭</string>
+    <string name="sound_media_1_minute">1分钟</string>
+    <string name="sound_media_2_minute">2分钟</string>
+    <string name="sound_media_5_minute">5分钟</string>
+    <string name="sound_media_10_minute">10分钟</string>
+    <string name="sound_media_30_minute">30分钟</string>
+    <string name="sound_volume_control">音量调节</string>
+
+    <string name="about_software_version">软件版本</string>
+    <string name="about_software_version_updating">软件版本更新中</string>
+    <string name="about_software_version_download_success">软件下载成功，即将自动安装...</string>
+    <string name="about_software_version_download_fail">软件下载失败</string>
+    <string name="about_software_version_update_ignore">暂不升级</string>
+    <string name="about_software_version_update_now">立即升级</string>
+    <string name="about_software_version_update_cancel">取消</string>
+    <string name="about_software_version_update_sure">确定</string>
+    <string name="about_software_lastversion">已经是最新版本</string>
+    <string name="about_software_version_update_current_version_value">当前版本：%1$s</string>
+    <string name="about_software_version_update_uptodate_version_value">最新版本：%1$s</string>
+    <string name="about_system_version">系统版本</string>
+    <string name="about_network_name">网络名称</string>
+    <string name="about_service_tel">客服电话</string>
+    <string name="about_restore_factory">恢复出厂设置</string>
+    <string name="about_restore_factory_tips">此操作会清楚您内部存储设备的所有数据，是否继续？</string>
+    <string name="about_restore_factory_sure">确定</string>
+    <string name="about_reset_system">重启系统</string>
+    <string name="about_reset_system_tips">您确认重启系统吗？</string>
+    <string name="management_did_mac_message">MAC: %1$s,  DID: %2$s</string>
+    <string name="setting_cup">杯量</string>
+    <string name="setting_theme">主题设置</string>
+    <string name="water_theme_first">炫彩黑</string>
+    <string name="water_theme_second">冰川蓝</string>
+    <string name="water_theme_third">原野绿</string>
+    <string name="setting_mode">模式</string>
+    <string name="setting_wendu">温度</string>
+    <string name="setting_lock">童锁设置</string>
+    <string name="setting_child_lock">童锁</string>
+    <string name="setting_more">更多功能</string>
+    <string name="setting_filter">滤芯功能</string>
+    <string name="setting_account_title">账号信息</string>
+    <string name="setting_appdownload_tips">扫描二维码即可下载云米商城APP</string>
+    <string name="setting_wlan">WiFi设置</string>
+    <string name="setting_hotspot">设备热点</string>
+    <string name="setting_screen">屏幕与声音</string>
+    <string name="setting_date">日期与时间</string>
+    <string name="setting_about">关于软件</string>
+    <string name="setting_logout">退出</string>
+    <string name="setting_input_pass">输入密码</string>
+    <string name="setting_input_pass_hint">请输入密码</string>
+    <string name="setting_time_auto">自动设置</string>
+    <string name="setting_fer_ver">固件版本</string>
+    <string name="setting_lock_on">长按童锁2秒可解锁</string>
+    <string name="setting_lock_off">童锁已关闭，对儿童安全存在一定风险</string>
+    <string name="setting_stop_iffull">杯满即停</string>
+    <string name="setting_cup_title">杯量设置</string>
+    <string name="setting_cup1">小杯/ml</string>
+    <string name="setting_cup2">中杯/ml</string>
+    <string name="setting_cup3">大杯/ml</string>
+    <string name="setting_temp_title">温度设置</string>
+    <string name="setting_more_title">更多功能</string>
+    <string name="setting_more_flush">冲洗</string>
+    <string name="setting_more_flush_now">立即冲洗</string>
+    <string name="setting_reset_filter">滤芯重置</string>
+    <string name="filter_name_carbon">碳棒滤芯</string>
+    <string name="filter_name_41">4in1滤芯</string>
+    <string name="filter_reset_tip">微信扫一扫打开云米商城小程序\n下单购买“%s”</string>
+    <string name="setting_flush_tips">冲洗中，请稍后</string>
+    <string name="setting_reset_ro_title">重置碳棒滤芯</string>
+    <string name="setting_reset_cabon_title">重置碳棒滤芯</string>
+    <string name="setting_reset_41_title">重置4in1滤芯</string>
+    <string name="setting_reset_ro_tips">确认重置碳棒滤芯？</string>
+    <string name="setting_reset_cabon_tips">确认重置碳棒滤芯？</string>
+    <string name="setting_reset_41_tips">确认重置4in1滤芯？</string>
+    <string name="setting_reset_success">重置成功</string>
+    <string name="setting_flush_success">冲洗完成</string>
+    <string name="setting_flush_exception">正在出水，无法进行冲洗哦！</string>
+    <string name="setting_on">开启</string>
+    <string name="setting_firm_version">固件版本</string>
+    <string name="setting_firm_update">固件版本更新中</string>
+    <string name="setting_firm_fail">固件下载失败</string>
+    <string name="setting_firm_suceess">升级成功</string>
+    <string name="setting_firm_finish">完成</string>
+    <string name="setting_filter_2">滤芯</string>
+
+
+    <string name="setting_filter_title1">请选择要冲洗的滤芯</string>
+    <string name="setting_filter_title2">请选择要重置的滤芯</string>
+    <string name="setting_filter_action1">立即冲洗</string>
+    <string name="setting_filter_action2">重置并冲洗</string>
+    <string name="setting_err_flush">无法冲洗</string>
+    <string name="setting_flush_stop">停止冲洗</string>
+    <string name="setting_flush_success1">冲洗完成，请换水</string>
+    <string name="setting_flush_success2">重置并冲洗完成</string>
+    <string name="setting_flush_restart">再次冲洗</string>
+
+    <string name="setting_theme_change">定时更换</string>
+    <string name="setting_theme_hz">更换频率</string>
+    <string name="setting_theme_title1">固定主题</string>
+    <string name="setting_theme_subtitle1">单选</string>
+    <string name="setting_theme_title2">轮换主题</string>
+    <string name="setting_theme_subtitle2">至少选择2张</string>
+
+    <string name="setting_reset_cup">重置杯量</string>
+    <string name="setting_reset_temp">重置温度</string>
+    <string name="first_water_out_title">机器保护中</string>
+    <string name="first_water_out_desc">接电首次出水会出常温水，请等候…</string>
+
+    <string name="setting_factory_test">工厂测试</string>
+    <string name="setting_factory_mode">工厂模式</string>
+
+    <string name="setting_mineral_title">矿物质设置</string>
+    <string name="mineral_low">低矿</string>
+    <string name="mineral_low_tip">少量矿物质\n
+            用于直饮及泡奶</string>
+    <string name="mineral_middle">中矿</string>
+    <string name="mineral_middle_tip">适量矿物质\n
+            推荐泡茶</string>
+    <string name="mineral_high">高矿</string>
+    <string name="mineral_high_tip">较多矿物质\n
+            推荐冲泡咖啡</string>
+    <string name="setting_reset_51">4in1滤芯</string>
+    <string name="setting_reset_51_title">重置4in1滤芯</string>
+    <string name="setting_reset_51_tips">确认重置4in1滤芯？</string>
+
+    <string name="app_buildTime">water_v101_2021-09-29</string>
+    <string name="mondy">星期一</string>
+    <string name="date_week">8月8日 星期三</string>
+    <string name="hour_minute">08:00</string>
+    <string name="am_pm">am</string>
+    <string name="wateraging_disinfecting">杀菌中...</string>
+    <string name="wateraging_disinfect_start">开启杀菌模式</string>
+    <string name="wateraging_disinfect_stop">退出杀菌模式</string>
+    <string name="wateraging_factory_start">开启工厂模式</string>
+    <string name="wateraging_factory_stop">关闭工厂模式</string>
+    <string name="wateraging_disinfect_title">杀菌模式</string>
+
+
+    <string name="date_change_one">12小时</string>
+    <string name="date_change_two">1天</string>
+    <string name="date_change_three">3天</string>
+    <string name="date_change_four">7天</string>
+    <string name="date_change_five">15天</string>
+    <string name="date_change_six">30天</string>
+    <string name="percent_unit">%</string>
+    <string name="fitlerwash_wash">清洗中</string>
+    <string name="fitlerwash_title_common">第%s次\n 换水</string>
+    <string name="fitlerwash_step_one">一</string>
+    <string name="fitlerwash_step_two">二</string>
+    <string name="fitlerwash_step_three">三</string>
+    <string name="fitlerwash_finish">冲洗完成</string>
+    <string name="fitlerwash_change_water">请换水</string>
+    <string name="water_ok">好的</string>
+    <string name="wateraging_factory_tip">请先打开工厂模式</string>
+    <string name="wateraging_close_tip">请关闭工厂模式和杀局模式</string>
+    <string name="watermain_test_selfclean">自清洁</string>
+    <string name="watermain_test_flushfiler">冲洗滤芯</string>
+
+</resources>

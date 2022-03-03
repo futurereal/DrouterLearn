@@ -1,0 +1,51 @@
+<resources>
+    <string name="camera_video">视频</string>
+    <string name="camera_cover">封面</string>
+    <string name="camera_duration_type">00:00:00</string>
+    <string name="create_video">停止录像</string>
+    <string name="camera_picture">拍照</string>
+    <string name="version_low">版本太低，无法停止</string>
+    <string name="camera_test">悬浮窗拍照测试</string>
+    <string name="title_activity_main">录像功能so7</string>
+    <string name="finish">处理完成</string>
+    <string name="begaindeal">开始处理</string>
+
+    <string name="cancel_text">取消</string>
+    <string name="sure_text">确定</string>
+    <string name="cancel_upload_text">取消上传</string>
+    <string name="delete_text">删除</string>
+    <string name="back_text">返回</string>
+    <string name="close_text">关闭</string>
+    <string name="retry_text">重试</string>
+    <string name="recorded_text">结束录制</string>
+    <string name="recorded_fail">录制失败</string>
+    <string name="upload_failure_text">上传失败</string>
+    <string name="upload_succeed_text">上传成功</string>
+    <string name="ok_text">我知道了</string>
+    <string name="recorded_content">烹饪还未完成，确定结束录制吗？</string>
+    <string name="videoedit_content">录制完成，视频正在压缩...</string>
+    <string name="videoedit_cutting">录制完成，视频正在剪切...</string>
+    <string name="videoedit_cutting_cancle">取消剪切</string>
+    <string name="videoedit_merging">剪切完成，视频正在合成...</string>
+    <string name="videoedit_merging_cancle">取消合成</string>
+    <string name="videoedit_compress">合成完成，视频正在压缩...</string>
+    <string name="videoedit_compress_cancle">取消压缩</string>
+    <string name="videoedit_makecover">压缩完成，正在生成封面...</string>
+    <string name="videoedit_makecover_cancle">取消生成</string>
+    <string name="upload_video_tip">视频正在上传...</string>
+    <string name="upload_cover_tip">封面正在上传...</string>
+    <string name="upload_prepare">上传准备中...</string>
+    <string name="delete_content">取消后不会保留视频，视频将被删除，确认删除吗？</string>
+    <string name="upload_failtip">请检查你的网络并重试，你也可以稍后在消息中心尝试重新上传</string>
+    <string name="ok_content">拍好的视频可在米家或云米商城App内的扩展程序中查看</string>
+    <string name="camera_title">相机</string>
+
+    <string name="logout_tip">请登录后，再上传视频</string>
+    <string name="video_not_exist">该视频不存在</string>
+
+    <string name="state_not_cooktip">非烹饪状态，不能录像</string>
+    <string name="camera_init_fail">摄像头初始化失败，找不到摄像头</string>
+    <string name="camera_no_permission">打开摄像头失败，没有权限</string>
+    <string name="delete_video_fail">视频删除失败</string>
+    <string name="delete_video_succeed">视频删除成功</string>
+</resources>

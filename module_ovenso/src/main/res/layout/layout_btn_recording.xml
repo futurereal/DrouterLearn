@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.viomi.ovenso.view.LinearLayoutSel xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/include_record"
+    android:layout_width="217dp"
+    android:layout_height="84dp"
+    android:layout_marginTop="60dp"
+    android:layout_marginRight="60dp"
+    android:background="@drawable/shape_solid_trans20_cor12"
+    android:gravity="center"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/include_over_finish"
+    app:layout_constraintVertical_chainStyle="packed">
+
+    <ImageView
+        android:id="@+id/include_record_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cookrun_record_stop" />
+
+    <TextView
+        android:id="@+id/include_record_tip"
+        style="@style/font_style_sc_regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text="@string/cookrunning_recording_start"
+        android:textColor="@color/white"
+        android:textSize="30dp" />
+</com.viomi.ovenso.view.LinearLayoutSel>

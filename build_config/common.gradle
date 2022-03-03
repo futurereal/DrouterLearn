@@ -1,0 +1,10 @@
+//apply plugin: 'com.android.application'
+apply from: "../build_config/base.gradle"
+android {
+    // VRout 需要这个属性
+    defaultConfig.javaCompileOptions {
+        annotationProcessorOptions {
+            arguments = [AROUTER_MODULE_NAME: project.getName()]
+        }
+    }
+}

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@color/black">
+
+        <com.viomi.ovensocommon.view.TitleBar
+            android:id="@+id/title_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:set_title_text="@string/setting_factorytest" />
+
+        <TextView
+            android:id="@+id/factory_deviceinfo"
+            style="@style/factorytest_text_style"
+            android:text="设备信息"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/factory_model"
+            style="@style/factorytest_text_style"
+            android:text="@string/setting_factorytest_model_engname"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/factory_deviceinfo" />
+
+        <TextView
+            android:id="@+id/facotry_pid"
+            style="@style/factorytest_text_style"
+            android:text="PID码:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/factory_model" />
+
+        <TextView
+            android:id="@+id/factory_muc"
+            style="@style/factorytest_text_style"
+            android:text="@string/setting_factorytest_mcu_version"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/facotry_pid" />
+
+        <TextView
+            android:id="@+id/factory_appversion"
+            style="@style/factorytest_text_style"
+            android:text="App版本:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/factory_muc" />
+
+        <Button
+            android:id="@+id/factory_agetest"
+            style="@style/factorytest_button_style"
+            android:text="@string/setting_factorytest_deviceageing"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/factory_changeenv"
+            style="@style/factorytest_button_style"
+            android:text="环境切换"
+            app:layout_constraintBottom_toBottomOf="@id/factory_agetest"
+            app:layout_constraintRight_toLeftOf="@id/factory_agetest" />
+
+
+        <Button
+            android:id="@+id/factory_systemset"
+            style="@style/factorytest_button_style"
+            android:text="系统工厂测试"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/factory_agetest" />
+
+        <Button
+            android:id="@+id/factory_serialtest"
+            style="@style/factorytest_button_style"
+            android:text="串口开关测试"
+            app:layout_constraintBottom_toBottomOf="@id/factory_systemset"
+            app:layout_constraintRight_toLeftOf="@id/factory_systemset" />
+
+        <Button
+            android:id="@+id/factory_ShowProp"
+            style="@style/factorytest_button_style"
+            android:text="@string/factorytest_open_propshowtip"
+            app:layout_constraintLeft_toLeftOf="@id/factory_serialtest"
+            app:layout_constraintRight_toRightOf="@id/factory_serialtest"
+            app:layout_constraintTop_toBottomOf="@id/factory_serialtest" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

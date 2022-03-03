@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:background="@drawable/img_theme2">
+
+        <TextView
+            android:id="@+id/cookrun_test_property"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/app_name" />
+
+        <Button
+            android:id="@+id/cookrun_test_step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="@string/cookrunning_testStep"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <Button
+            android:id="@+id/cookrun_test_chugou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="@string/cookrunning_testchugou"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="@id/cookrun_test_step"
+            app:layout_constraintStart_toEndOf="@id/cookrun_test_step"
+            app:layout_constraintTop_toTopOf="@id/cookrun_test_step" />
+
+        <Button
+            android:id="@+id/cookrun_test_recipestep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="@string/cookrunning_recipestep"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="@id/cookrun_test_step"
+            app:layout_constraintStart_toEndOf="@id/cookrun_test_chugou"
+            app:layout_constraintTop_toTopOf="@id/cookrun_test_step" />
+
+        <Button
+            android:id="@+id/cookrun_test_water_tank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="@string/cookrunning_test_water_tank"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="@id/cookrun_test_step"
+            app:layout_constraintStart_toEndOf="@id/cookrun_test_recipestep"
+            app:layout_constraintTop_toTopOf="@id/cookrun_test_step" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/cookrun_test_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="cookrun_test_chugou,cookrun_test_recipestep,cookrun_test_step,cookrun_test_water_tank"
+            tools:visibility="visible" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

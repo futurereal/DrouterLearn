@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:background="#171717">
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:src="@drawable/icon_not_login" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="34dp"
+            android:alpha="0.6"
+            android:text="@string/myrecipe_not_login"
+            android:textColor="@color/white"
+            android:textSize="34dp" />
+
+        <TextView
+            android:id="@+id/tvToLogin"
+            android:layout_width="300dp"
+            android:layout_height="79dp"
+            android:background="@drawable/gradient_green_bg"
+            android:gravity="center"
+            android:text="@string/login_now"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+    </LinearLayout>
+</layout>

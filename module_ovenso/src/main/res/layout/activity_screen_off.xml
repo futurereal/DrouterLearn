@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_black_alpha_70"
+        tools:context="com.viomi.ovenso.ui.activity.ScreenOffActivity">
+
+        <com.viomi.ovenso.view.CircleProgressView
+            android:id="@+id/screenoff_progress"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:text=""
+            android:textColor="#8AEDE2"
+            android:textSize="24sp"
+            android:visibility="visible"
+            app:drawable_srcid="@drawable/lock"
+            app:inner_press_color="@color/transparent"
+            app:inner_progress_color="@color/viomi_green_alpha_33"
+            app:inner_release_color="@color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:outer_end_color="@color/viomi_green"
+            app:outer_start_color="@color/viomi_green"
+            app:outer_tip_color="#8AEDE2"
+            app:outer_tip_size="24"
+            app:outer_visible="true"
+            app:progress_current="1"
+            app:progress_max="100"
+            app:start_angle_degree="90"
+            app:texttip_unit="@string/percent_unit"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

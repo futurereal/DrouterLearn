@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/messagetitle_normal_bg">
+
+        <TextView
+            android:id="@+id/modeselect_title"
+            style="@style/font_style_sc_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:textColor="@color/color_white"
+            android:textSize="34dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/aging_ovenmicro_modetwo" />
+
+        <Button
+            android:id="@+id/modeselect_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:padding="21dp"
+            android:text="@string/cancel"
+            android:textColor="@color/color_white_alpha_70"
+            android:textSize="32dp"
+            app:layout_constraintBottom_toBottomOf="@id/modeselect_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/modeselect_title" />
+
+        <Button
+            android:id="@+id/modeselect_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@null"
+            android:padding="21dp"
+            android:text="@string/oven_sure"
+            android:textColor="@color/picview_center_color"
+            android:textSize="32dp"
+            app:layout_constraintBottom_toBottomOf="@id/modeselect_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/modeselect_title" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_modeselect_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/modeselect_title"
+            tools:context=".ui.activity.ModeListActivity" />
+        <!--时间选择器-->
+        <com.viomi.ovenso.view.HorizonPickerView
+            android:id="@+id/modeselect_timerpicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginRight="150dp"
+            app:pickerview_unitText="@string/pickerview_minute"
+            app:layout_constraintBottom_toTopOf="@id/modeselect_temperaturepicker"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerview_modeselect_title" />
+        <!--温度选择器-->
+        <com.viomi.ovenso.view.HorizonPickerView
+            android:id="@+id/modeselect_temperaturepicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="150dp"
+            android:layout_marginBottom="13dp"
+            app:pickerview_unitText="@string/temperature_single"
+            app:layout_constraintBottom_toTopOf="@id/modeselect_temperature_tip"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/modeselect_temperature_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:drawableLeft="@drawable/custommode_warm"
+            android:drawablePadding="8dp"
+            android:textColor="@color/modeselect_tempraturetip"
+            android:textSize="24dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@string/custommode_select_tempearaturewarm_before"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

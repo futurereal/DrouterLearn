@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/messagetitle_normal_bg">
+
+        <ImageView
+            android:id="@+id/messagetitle_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/messagelist_normal" />
+
+        <TextView
+            android:id="@+id/messagetitle_name"
+            style="@style/font_style_sc_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/color_white_alpha_90"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="@id/messagetitle_icon"
+            app:layout_constraintLeft_toRightOf="@id/messagetitle_icon"
+            app:layout_constraintTop_toTopOf="@id/messagetitle_icon"
+            tools:text="@string/oven_main_waterboxopen" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

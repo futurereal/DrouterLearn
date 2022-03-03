@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorTrans">#00000000</color>
+    <color name="colorWhite">#FFFFFFFF</color>
+    <color name="colorWhite60">#60FFFFFF</color>
+    <color name="colorWhite40">#40FFFFFF</color>
+    <color name="viomi_green">#FF28BECA</color>
+</resources>

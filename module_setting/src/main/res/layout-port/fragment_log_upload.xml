@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+    <com.viomi.ovensocommon.view.TitleBar
+        android:id="@+id/title_bar"
+        style="@style/setting_text_style"
+        android:layout_height="wrap_content"
+        app:set_title_text="@string/aboutsofe_menu_uploadlog"
+        app:set_title_text_size="44dp" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tip_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp" />
+
+    <RelativeLayout
+        android:id="@+id/date_choose"
+        style="@style/vlog_date_container_style"
+
+        android:layout_height="80dp">
+
+        <TextView
+            android:id="@+id/choose_title"
+            style="@style/vlog_date_container_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/choose_text"
+            style="@style/vlog_log_upload_btn_style"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:textSize="30dp"
+            tools:text="2021-01-07" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/upload"
+        style="@style/vlog_log_upload_btn_style"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:checked="false"
+        android:textSize="40dp" />
+
+</LinearLayout>

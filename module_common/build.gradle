@@ -1,0 +1,21 @@
+apply from: "../build_config/common.gradle"
+dependencies {
+    api project(":lib_commonjar")
+    api rootProject.ext.dependencies["viomi_vlog"]
+    api rootProject.ext.dependencies["rxjava"]
+    api rootProject.ext.dependencies["rxandroid"]
+    api rootProject.ext.dependencies["room"]
+    api rootProject.ext.dependencies["room-rxjava"]
+    kapt rootProject.ext.dependencies["room-compiler"]
+    //串口 被module_setting 依赖
+    implementation rootProject.ext.dependencies["iot_devicelib"]
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+    implementation("androidx.datastore:datastore-core:1.0.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
+    // WorkManager
+    // (Java only)
+    api ("androidx.work:work-runtime:2.7.1")
+    // Kotlin + coroutines
+    api ("androidx.work:work-runtime-ktx:2.7.1")
+
+}

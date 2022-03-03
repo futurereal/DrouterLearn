@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/custommode_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/mode_micro_combine" />
+
+        <TextView
+            android:id="@+id/custommode_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/custommode_bg"
+            tools:text="@string/cookpara_stepone" />
+
+        <TextView
+            android:id="@+id/custommode_name"
+            style="@style/font_style_sc_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:drawableRight="@drawable/custommode_setting_tip"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+            android:textSize="40dp"
+            app:layout_constraintLeft_toLeftOf="@id/custommode_bg"
+            app:layout_constraintTop_toBottomOf="@id/custommode_index"
+            tools:text="@string/aging_ovenmicro_modetwo" />
+
+        <TextView
+            android:id="@+id/custommode_firepower_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/din_alternate_bold"
+            android:includeFontPadding="false"
+            android:textColor="@color/color_white_alpha_80"
+            android:textSize="22dp"
+            app:layout_constraintLeft_toLeftOf="@id/custommode_name"
+            app:layout_constraintTop_toBottomOf="@id/custommode_name"
+            tools:text="@string/custommode_firepower_sample" />
+
+        <TextView
+            android:id="@+id/custommode_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="13dp"
+            android:drawableLeft="@drawable/custommode_delete"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp"
+            android:text="@string/ovenso_delete"
+            app:layout_constraintBottom_toBottomOf="@id/custommode_bg"
+            app:layout_constraintLeft_toLeftOf="@id/custommode_bg" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/custommode_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="custommode_delete,custommode_firepower_time,custommode_name,custommode_index" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

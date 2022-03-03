@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="612dp"
+        android:layout_height="373dp"
+        android:background="@drawable/shape_dialog_bg"
+        android:paddingHorizontal="40dp">
+
+        <TextView
+            android:id="@+id/firmupgrade_title"
+            style="@style/font_style_sc_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="@string/firmupgrade_title"
+            android:textColor="@color/color_white"
+            android:textSize="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/firmupgrade_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/upgrade_checking"
+            android:textColor="@color/color_white_alpha_60"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/firmupgrade_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/color_green_light"
+            android:textSize="58dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/firmupgrade_cancel"
+            android:layout_width="0dp"
+            android:layout_height="78dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="35dp"
+            android:background="@drawable/shape_green_stock_btn"
+            android:stateListAnimator="@null"
+            android:text="@string/upgrade_late"
+            android:textColor="@color/color_green_light"
+            android:textSize="34dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/firmupgrade_sure"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <Button
+            android:id="@+id/firmupgrade_sure"
+            android:layout_width="0dp"
+            android:layout_height="78dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="35dp"
+            android:background="@drawable/shape_green_btn"
+            android:stateListAnimator="@null"
+            android:text="@string/module_sure"
+            android:textColor="@color/color_white"
+            android:textSize="34dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/firmupgrade_cancel" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

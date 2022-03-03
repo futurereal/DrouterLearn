@@ -1,0 +1,19 @@
+def isModuleLibary = isLibary.toBoolean()
+apply from: "../build_config/base.gradle"
+android {
+    defaultConfig {
+        if (!isModuleLibary) {
+            applicationId "com.viomi.spec_profile"
+            /*升级的sdk 需要用*/
+            versionCode 1
+            versionName "1.0.0"
+        }
+    }
+
+}
+dependencies {
+    implementation('com.mi.device:miot-device-sdk:3.2.0') { exclude group: 'org.slf4j' }
+    implementation rootProject.ext.dependencies["conscrypt-android"]
+    implementation rootProject.ext.dependencies["gson"]
+    api project(path: ':module_common')
+}

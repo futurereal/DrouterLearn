@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="waterSetTitleArray">
+        <item>@string/never_login</item>
+        <item>@string/menuitem_wlan</item>
+        <item>@string/menuitem_hotspot</item>
+        <item>@string/menuitem_theme</item>
+        <item>@string/setting_temp_title</item>
+        <item>@string/setting_cup_title</item>
+        <item>@string/setting_lock</item>
+        <item>@string/setting_mineral_title</item>
+        <item>@string/setting_filter</item>
+        <item>@string/menuitem_screenvolume</item>
+        <item>@string/menuitem_datetime</item>
+        <item>@string/menuitem_about</item>
+    </integer-array>
+
+    <integer-array name="waterSetResArray">
+        <item>@drawable/menuheader_default</item>
+        <item>@drawable/water_set_wifi</item>
+        <item>@drawable/water_set_hotspot</item>
+        <item>@drawable/water_set_theme</item>
+        <item>@drawable/water_set_tmp</item>
+        <item>@drawable/water_set_cup_size</item>
+        <item>@drawable/water_set_lock</item>
+        <item>@drawable/water_set_mineral</item>
+        <item>@drawable/water_set_filter</item>
+        <item>@drawable/water_set_screen</item>
+        <item>@drawable/water_set_date</item>
+        <item>@drawable/water_set_about</item>
+    </integer-array>
+
+    <string-array name="waterRouterArray">
+        <item>/modulesetting/AccountInfoFragment</item>
+        <item>/modulesetting/WlanSetFragment</item>
+        <item>/modulesetting/HotSpotFragment</item>
+        <item>/water/WaterThemeFragment</item>
+        <item>/water/TempFragment</item>
+        <item>/water/CupFragment</item>
+        <item>/water/ChildLockFragment</item>
+        <item>/water/MineralFragment</item>
+        <item>/water/FilterFragment</item>
+        <item>/modulesetting/ScreenVolumeFragment</item>
+        <item>/modulesetting/DateTimeFragment</item>
+        <item>/modulesetting/AboutSoftwareFragment</item>
+    </string-array>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LockProgressView">
+        <attr name="android:text" />
+        <attr name="android:textSize" />
+        <attr name="android:textColor" />
+        <attr name="android:drawablePadding" />
+        <attr name="lock_progress_src" format="reference|color" />
+        <attr name="lock_progress_border_inner_circle_color" format="color" />
+        <attr name="lock_progress_border_outer_circle_start_color" format="color" />
+        <attr name="lock_progress_border_outer_circle_end_color" format="color" />
+        <attr name="lock_progress_border_circle_width" format="dimension" />
+        <attr name="lock_progress_max" format="integer" />
+        <attr name="lock_progress_current" format="float" />
+        <attr name="lock_start_degree" format="float" />
+    </declare-styleable>
+
+    <!--公共设置页的菜单配置-->
+    <string-array name="menu_module_setting">
+        <item>head</item>
+        <item>wifi</item>
+        <item>hotspot</item>
+        <item>themeOvenso</item>
+        <item>screen</item>
+        <item>date</item>
+        <item>aboutSoft</item>
+    </string-array>
+</resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="294dp"
+        android:layout_height="400dp"
+        tools:background="@color/black">
+        <!--不能用match_parent 否则图片显示不出来-->
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/recipe_bg"
+            android:layout_width="294dp"
+            android:layout_height="400dp"
+            app:actualImageScaleType="centerCrop"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:placeholderImage="@drawable/img_holder_default"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundBottomLeft="true"
+            app:roundBottomRight="true"
+            app:roundTopLeft="true"
+            app:roundTopRight="true"
+            app:roundedCornerRadius="20dp"
+            tools:placeholderImageScaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/recipe_name"
+            style="@style/font_style_sc_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:textColor="@color/white_f7"
+            android:textSize="40dp"
+            app:layout_constraintLeft_toLeftOf="@id/recipe_bg"
+            app:layout_constraintTop_toTopOf="@id/recipe_bg"
+            tools:text="高温蒸" />
+
+        <TextView
+            android:id="@+id/tvTmLength"
+            style="@style/font_style_sc_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:textColor="@color/white_f7"
+            android:textSize="50dp"
+            app:layout_constraintLeft_toLeftOf="@id/recipe_name"
+            app:layout_constraintTop_toBottomOf="@id/recipe_name"
+            tools:text="10dp" />
+
+        <TextView
+            android:id="@+id/tvUnit"
+            style="@style/font_style_sc_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:includeFontPadding="false"
+            android:text="@string/ovenso_timeunit"
+            android:textColor="@color/white_f7"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toRightOf="@id/tvTmLength"
+            app:layout_constraintTop_toTopOf="@id/tvTmLength" />
+
+        <com.viomi.ovenso.view.TextImageView
+            android:id="@+id/tvCollect"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginLeft="31dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/shape_solid_02_cor12"
+            android:drawableLeft="@drawable/like"
+            android:drawablePadding="11dp"
+            android:gravity="center"
+            android:paddingHorizontal="14dp"
+            android:text="已收藏"
+            android:textColor="#f7f7f7"
+            android:textSize="22dp"
+            android:visibility="gone"
+            app:drawableLeftHeight="24dp"
+            app:drawableLeftWidth="24dp"
+            app:layout_constraintBottom_toBottomOf="@id/recipe_bg"
+            app:layout_constraintLeft_toLeftOf="@id/recipe_bg"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

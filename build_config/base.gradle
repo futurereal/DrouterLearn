@@ -1,0 +1,183 @@
+import java.text.DateFormat
+import java.text.SimpleDateFormat
+
+def isModuleLibary = project.isLibary.toBoolean()
+def currentTime = getCurrentTime()
+if (isModuleLibary) {
+    apply plugin: 'com.android.library'
+} else {
+    apply plugin: 'com.android.application'
+    // 路由
+    apply plugin: 'com.viomi.router.plugin'
+    apply plugin: "com.viomi.log.plugin"
+}
+// apk后缀是否加Test
+def APK_IS_DEBUG = false
+
+def getCurrentTime() {
+    DateFormat df = new SimpleDateFormat("MM-dd_HH-mm")
+    return df.format(Calendar.getInstance(Locale.CHINA).getTime())
+}
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+android {
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 30
+        flavorDimensions "versionCode"
+        multiDexEnabled true
+        buildConfigField "String", "apkBuildTime", "\"${currentTime}\""
+        buildConfigField "String", "LIBRARY_PACKAGE_NAME", "\"${currentTime}\""
+        // 对于abi的这个配置，一定要放在defaultConfig{}里面，否则会报错
+        // 后续的app 需要64位的，32的过时了
+        ndk { abiFilters "armeabi-v7a" }
+//        ndk { abiFilters "arm64-v8a","armeabi-v7a","armeabi" }
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+                // 加上此句，否则会报dlopen failed: library "libc++_shared.so" not found错误
+                arguments "-DANDROID_STL=c++_shared"
+            }
+        }
+        // 插件 annotation
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+
+
+    sourceSets {
+        main {
+            // 引入AIDL
+            java.srcDirs = ['src/main/java', 'src/main/aidl']
+            if (isModuleLibary) {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                java {
+                    exclude 'debug/**'
+                }
+            } else {
+                manifest.srcFile 'src/main/AndroidManifestApp.xml'
+            }
+        }
+    }
+    // 本地依赖包  jar包或者aar包
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    if (!isModuleLibary) {
+        // 签名配置
+        signingConfigs {
+            release {
+                keyAlias 'water'
+                keyPassword '123456'
+                storePassword '123456'
+                storeFile file('water')
+            }
+        }
+        buildTypes {
+            debug {
+                signingConfig signingConfigs.release
+                minifyEnabled false
+                shrinkResources false
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            }
+            release {
+                signingConfig signingConfigs.release
+                minifyEnabled false
+                shrinkResources false
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            }
+
+        }
+
+        // 自定义打包名称
+        applicationVariants.all { variant ->
+            variant.outputs.all {
+                def diff = APK_IS_DEBUG ? "-TEST" : ""
+                def fileName = variant.name + "-v" + defaultConfig.versionCode + "-" + currentTime + diff + ".apk"
+                outputFileName = fileName
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'AndroidManifest.xml'
+    }
+    dataBinding {
+        enabled = true
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    adbOptions {
+        timeOutInMs 10 * 1000
+        installOptions '-d'
+    }
+    // 如果使用高版本的AndroidX  1.3.1 的，需要加，否则报 Please specify proper '-jvm-target' option m默认1.6 版本太低
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+// 插件 kapt 只要 有依赖 kotlin ViomiRouterLib 插件使用
+kapt {
+    arguments {
+        arg("moduleName", project.getName())
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['**/*.aar'])
+    // 测试的库
+//    testImplementation 'org.robolectric:robolectric:4.7.3'
+    // 基础库
+    api rootProject.ext.support["material"]
+    api rootProject.ext.support["androidx-appcompat"]
+    api("androidx.activity:activity-ktx:1.3.1")
+    api rootProject.ext.support["constraint-layout"]
+    api rootProject.ext.support["androidx-multidex"]
+    api rootProject.ext.support["androidx-recyclerview"]
+    api rootProject.ext.support["androidx-junit"]
+    api rootProject.ext.support["androidx-espresso"]
+    // 协程的库
+    api rootProject.ext.support["kotlinx-coroutines_android"]
+//    androidTestImplementation rootProject.ext.support["kotlinx-coroutines_core"]
+    api rootProject.ext.support["kotlin-stdlib"]
+    //其他公共库
+    api rootProject.ext.dependencies["fastjson"]
+    // ViomiRouterLib 库
+    api rootProject.ext.dependencies["viomi-router-core"]
+    kapt rootProject.ext.dependencies["viomi-router-compiler"]
+    // 工具库
+    api rootProject.ext.dependencies["utilcode"]
+}

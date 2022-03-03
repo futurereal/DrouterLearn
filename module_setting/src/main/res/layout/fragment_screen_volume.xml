@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/menufragment_unselect">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/setting_container_style"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/screenvolume_lock_title"
+                style="@style/setting_normal_text_horizontal_style"
+                android:paddingBottom="50dp"
+                android:text="@string/sound_lock_time"
+                app:layout_constraintBottom_toTopOf="@id/screenvolume_standby_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/screenvolume_lock_time"
+                style="@style/setting_normal_text_horizontal_style.gray"
+                android:drawableRight="@drawable/ic_lists_more"
+                android:paddingBottom="50dp"
+                android:text="30分钟"
+                app:layout_constraintBottom_toBottomOf="@id/screenvolume_lock_title"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/screenvolume_lock_title" />
+
+            <TextView
+                android:id="@+id/screenvolume_standby_title"
+                style="@style/setting_normal_text_horizontal_style"
+                android:text="@string/sound_stanby_time"
+                app:layout_constraintStart_toStartOf="@id/screenvolume_brightness_title"
+                app:layout_constraintTop_toBottomOf="@id/screenvolume_lock_title" />
+
+            <TextView
+                android:id="@+id/screenvolume_standby_time"
+                style="@style/setting_normal_text_horizontal_style.gray"
+                android:drawableRight="@drawable/ic_lists_more"
+                android:text="30分钟"
+                app:layout_constraintBottom_toBottomOf="@id/screenvolume_standby_title"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/screenvolume_standby_title" />
+
+            <TextView
+                android:id="@+id/screenvolume_brightness_title"
+                style="@style/setting_normal_text_horizontal_style"
+                android:layout_marginTop="50dp"
+                android:text="@string/sound_screen_brightness"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/screenvolume_standby_title" />
+
+            <TextView
+                android:id="@+id/screenvolume_brightness_percentage"
+                style="@style/setting_normal_text_horizontal_style.gray"
+                android:text="70%"
+                app:layout_constraintBottom_toBottomOf="@id/screenvolume_brightness_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/screenvolume_brightness_title" />
+
+            <com.viomi.ovensocommon.view.CommonSettingSeekBar
+                android:id="@+id/screenvolume_brightness_seekbar"
+                android:layout_width="0dp"
+                android:layout_height="66dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintEnd_toEndOf="@id/screenvolume_brightness_percentage"
+                app:layout_constraintStart_toStartOf="@id/screenvolume_brightness_title"
+                app:layout_constraintTop_toBottomOf="@id/screenvolume_brightness_percentage" />
+
+            <View
+                android:id="@+id/screenvolume_brightness_divideline"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="36dp"
+                android:alpha="0.2"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/screenvolume_brightness_seekbar" />
+
+            <TextView
+                android:id="@+id/screenvolume_volume_title"
+                style="@style/setting_normal_text_horizontal_style"
+                android:layout_marginTop="25dp"
+                android:text="@string/sound_volume_control"
+                app:layout_constraintStart_toStartOf="@id/screenvolume_brightness_title"
+                app:layout_constraintTop_toBottomOf="@id/screenvolume_brightness_divideline" />
+
+            <TextView
+                android:id="@+id/screenvolume_volume_percentage"
+                style="@style/setting_normal_text_horizontal_style.gray"
+                android:text="70%"
+                app:layout_constraintBottom_toBottomOf="@id/screenvolume_volume_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/screenvolume_volume_title" />
+
+            <com.viomi.ovensocommon.view.CommonSettingSeekBar
+                android:id="@+id/screenvolume_volume_seekbar"
+                android:layout_width="0dp"
+                android:layout_height="66dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintEnd_toEndOf="@id/screenvolume_volume_percentage"
+                app:layout_constraintStart_toStartOf="@id/screenvolume_volume_title"
+                app:layout_constraintTop_toBottomOf="@id/screenvolume_volume_percentage" />
+
+            <TextView
+                android:id="@+id/screenvolume_speak_title"
+                style="@style/setting_normal_text_horizontal_style"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/sound_speak"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/screenvolume_volume_seekbar" />
+
+            <com.viomi.ovensocommon.view.SwitchButton
+                android:id="@+id/screenvolume_speak_switch"
+                android:layout_width="90dp"
+                android:layout_height="47dp"
+                app:layout_constraintBottom_toBottomOf="@id/screenvolume_speak_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/screenvolume_speak_title"
+                app:tintColor="@color/color_green_light" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/screenvolume_speak_group"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:constraint_referenced_ids="screenvolume_speak_title,screenvolume_speak_switch"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

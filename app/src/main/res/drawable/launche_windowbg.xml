@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 整体的背景颜色 -->
+    <item>
+        <color android:color="@color/black" />
+    </item>
+    <!-- 底部 -->
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/viomi_icon" />
+    </item>
+</layer-list>

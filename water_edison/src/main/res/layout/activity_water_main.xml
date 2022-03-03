@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="waterMainViewModel"
+            type="com.viomi.waterpurifier.edison.viewmodule.WaterMainViewModel" />
+
+        <variable
+            name="amPm"
+            type="java.lang.String" />
+
+        <variable
+            name="waterThemeEnum"
+            type="com.viomi.waterpurifier.edison.config.WaterThemeEnum" />
+
+        <!--温度-->
+        <variable
+            name="waterTemperature"
+            type="java.lang.Integer" />
+        <!--是否正在出水-->
+        <variable
+            name="waterStatus"
+            type="com.viomi.waterpurifier.edison.entity.WaterStatusEntity" />
+        <!--目标出水量-->
+        <variable
+            name="targetWaterFLowStr"
+            type="java.lang.String" />
+        <!--当前出水量-->
+        <variable
+            name="currentWaterFlow"
+            type="java.lang.Integer" />
+
+        <variable
+            name="temperatueModeEnum"
+            type="com.viomi.waterpurifier.edison.config.TemperatureModeEnum" />
+
+        <variable
+            name="waterQualityEnum"
+            type="com.viomi.waterpurifier.edison.config.WaterQualityEnum" />
+
+        <variable
+            name="waterFlowEnum"
+            type="com.viomi.waterpurifier.edison.config.WaterFlowEnum" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/watermain_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:waterThemeEnum="@{waterThemeEnum}"
+        tools:background="@drawable/bg_theme1">
+        <!--主界面动画-->
+        <!--为了解决margin 为负数的问题 ℃ -->
+        <ImageView
+            android:id="@+id/watermain_amin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:minHeight="720dp"
+            app:layout_constraintBottom_toTopOf="@id/temperature_control_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:src="@drawable/theme_default_big_cup_0" />
+
+        <android.widget.Space
+            android:id="@+id/watermain_anim_space"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="100dp"
+            app:layout_constraintBottom_toBottomOf="@id/watermain_amin"
+            app:layout_constraintEnd_toEndOf="@id/watermain_amin" />
+
+        <ImageView
+            android:id="@+id/watermain_out_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/end"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/watermain_amin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/watermain_amin" />
+
+
+        <TextView
+            android:id="@+id/watermain_temperature_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:fontFamily="@font/bebas_neue_bold"
+            android:includeFontPadding="false"
+            android:text="@{waterStatus.isWaterOut?String.valueOf(currentWaterFlow):String.valueOf(waterTemperature)}"
+            android:textColor="@color/color_white"
+            android:textSize="170sp"
+            app:layout_constraintBottom_toBottomOf="@id/watermain_amin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/watermain_amin"
+            tools:text="55" />
+
+        <TextView
+            android:id="@+id/temperature_amount_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/watermain_temperature_amount"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/bebas_neue_bold"
+            android:text='@{waterStatus.big}'
+            android:textColor="@color/color_white"
+            android:textSize="75sp"
+            app:layout_constraintLeft_toRightOf="@+id/watermain_temperature_amount"
+            app:layout_constraintTop_toTopOf="@id/watermain_temperature_amount" />
+
+        <TextView
+            android:id="@+id/watermain_current_waterquality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:fontFamily="@font/bebas_neue_bold"
+            android:gravity="center_horizontal"
+            android:text="@{waterQualityEnum.nameStrId}"
+            android:textColor="@color/color_white"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toTopOf="@id/watermain_temperature_amount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/temperature_amount_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/bebas_neue_bold"
+            android:includeFontPadding="false"
+            android:text="@{waterStatus.isWaterOut?String.valueOf(waterTemperature):String.valueOf(targetWaterFLowStr)}"
+            android:textColor="@color/color_white"
+            android:textSize="60sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/watermain_temperature_amount"
+            tools:text="55" />
+
+        <TextView
+            android:id="@+id/temperature_amount_unit__small"
+            android:layout_width="0dp"
+            android:layout_height="27dp"
+            android:layout_alignTop="@id/temperature_amount_small"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/bebas_neue_bold"
+            android:text='@{waterStatus.small}'
+            android:textColor="@color/color_white"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toRightOf="@+id/temperature_amount_small"
+            app:layout_constraintTop_toTopOf="@id/temperature_amount_small" />
+        <!--错误提示-->
+        <com.viomi.waterpurifier.edison.widget.MessageTipLayout
+            android:id="@+id/watermain_messagetip"
+            android:layout_width="wrap_content"
+            android:layout_height="66dp"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/watermain_time_clock" />
+
+        <LinearLayout
+            android:id="@+id/countdown_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="66dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/err_toast_bg"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="30dp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/watermain_messagetip"
+            tools:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/toast_alerm" />
+
+            <TextView
+                android:id="@+id/selfclean_countdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:gravity="center"
+                android:lines="1"
+                android:textColor="@color/white"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/temperature_control_layout"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="-50dp"
+            android:layout_marginRight="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/watermain_anim_space"
+            app:waterThemeEnum="@{waterThemeEnum}"
+            tools:background="@drawable/watermain_theme1_temperaturebg">
+
+            <TextView
+                android:id="@+id/temperature_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:onClick="@{waterMainViewModel::changeTemperatureMode}"
+                android:text="@{temperatueModeEnum.nameTextId}"
+                android:textColor="@color/color_white"
+                android:textSize="38sp"
+                app:layout_constraintBottom_toTopOf="@+id/temperature_dots"
+                app:layout_constraintEnd_toEndOf="@id/temperature_dots"
+                app:layout_constraintStart_toStartOf="@id/temperature_dots"
+                app:waterThemeEnum="@{waterThemeEnum}"
+                tools:text="@string/normal_temp" />
+
+            <com.viomi.waterpurifier.edison.widget.DotsLayout
+                android:id="@+id/temperature_dots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="60dp"
+                android:gravity="center"
+                android:textColor="@color/color_66"
+                app:dot_count="4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:waterThemeEnum="@{waterThemeEnum}" />
+
+
+            <ImageView
+                android:id="@+id/temperature_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:onClick="@{waterMainViewModel::increaseTemperature}"
+                android:padding="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/temperature_minus"
+                app:layout_constraintTop_toTopOf="parent"
+                app:waterThemeEnum="@{waterThemeEnum}"
+                tools:src="@drawable/watermain_theme1_add" />
+
+
+            <ImageView
+                android:id="@+id/temperature_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:onClick="@{waterMainViewModel::decreaseTemperature}"
+                android:padding="30dp"
+                app:layout_constraintBottom_toBottomOf="@id/temperature_add"
+                app:layout_constraintEnd_toStartOf="@id/temperature_add"
+                app:layout_constraintStart_toEndOf="@id/temperature_line"
+                app:layout_constraintTop_toTopOf="@id/temperature_add"
+                app:waterThemeEnum="@{waterThemeEnum}"
+                tools:src="@drawable/watermain_theme1_minu" />
+
+
+            <View
+                android:id="@+id/temperature_line"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="36dp"
+                android:layout_marginBottom="36dp"
+                android:alpha="0.3"
+                android:background="@color/white"
+                app:layout_constraintLeft_toRightOf="@+id/temperature_name"
+                app:layout_constraintRight_toLeftOf="@id/temperature_minus" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--水质切换-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/watermain_quality_group"
+            android:layout_width="308dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="30dp"
+            android:onClick="@{waterMainViewModel::changeWaterMineralMode}"
+            app:layout_constraintLeft_toLeftOf="@id/temperature_control_layout"
+            app:layout_constraintTop_toBottomOf="@+id/temperature_control_layout"
+            app:waterThemeEnum="@{waterThemeEnum}"
+            tools:background="@drawable/watermain_theme1_temperaturebg">
+
+            <ImageView
+                android:id="@+id/watermain_quality_icon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="34dp"
+                android:background="@{waterQualityEnum.iconDrawableId}"
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toTopOf="@id/watermain_quality_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/mineral_water" />
+
+            <TextView
+                android:id="@+id/watermain_quality_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:includeFontPadding="false"
+                android:text="@{waterQualityEnum.nameStrId}"
+                android:textColor="@color/color_white"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/watermain_quality_icon"
+                app:waterThemeEnum="@{waterThemeEnum}" />
+
+            <com.viomi.waterpurifier.edison.widget.DotsLayout
+                android:id="@+id/watermain_quality_dots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:textColor="@color/color_66"
+                app:dot_count="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/watermain_quality_name"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:waterThemeEnum="@{waterThemeEnum}" />
+
+            <View
+                android:id="@+id/white_view"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/shape_white_light"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/watermain_flow_layout"
+            android:layout_width="308dp"
+            android:layout_height="240dp"
+            android:layout_marginStart="24dp"
+            android:onClick="@{waterMainViewModel::changeWaterFlowMode}"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/watermain_quality_group"
+            app:layout_constraintEnd_toEndOf="@id/temperature_control_layout"
+            app:layout_constraintTop_toBottomOf="@id/temperature_control_layout"
+            app:layout_constraintTop_toTopOf="@id/watermain_quality_group"
+            app:waterThemeEnum="@{waterThemeEnum}"
+            tools:background="@drawable/watermain_theme1_temperaturebg">
+
+            <ImageView
+                android:id="@+id/watermain_flow_icon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:background="@{waterFlowEnum.iconId}"
+                android:scaleType="centerInside"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/cup_big" />
+
+            <TextView
+                android:id="@+id/watermain_flow_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:includeFontPadding="false"
+                android:text="@{waterFlowEnum.nameId}"
+                android:textColor="@color/color_white"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="@id/watermain_flow_icon"
+                app:layout_constraintStart_toStartOf="@id/watermain_flow_icon"
+                app:layout_constraintTop_toBottomOf="@id/watermain_flow_icon"
+                app:waterThemeEnum="@{waterThemeEnum}" />
+
+            <com.viomi.waterpurifier.edison.widget.DotsLayout
+                android:id="@+id/watermain_flow_dots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/color_66"
+                app:dot_count="4"
+                app:layout_constraintEnd_toEndOf="@id/watermain_flow_name"
+                app:layout_constraintStart_toStartOf="@id/watermain_flow_name"
+                app:layout_constraintTop_toBottomOf="@id/watermain_flow_name"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:waterThemeEnum="@{waterThemeEnum}"
+                tools:text="@string/select_mode" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--        放在最上层，否则可能被覆盖-->
+        <ImageButton
+            android:id="@+id/watermain_childlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:background="@null"
+            android:paddingHorizontal="15dp"
+            android:paddingTop="30dp"
+            android:src="@drawable/selector_childlock_theme1"
+            app:layout_constraintBottom_toBottomOf="@id/watermain_time_clock"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/watermain_time_clock"
+            app:waterThemeEnum="@{waterThemeEnum}" />
+
+        <ImageButton
+            android:id="@+id/watermain_wifistatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:paddingHorizontal="15dp"
+            android:paddingTop="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/selector_wifestatus_theme1"
+            app:layout_constraintBottom_toBottomOf="@id/watermain_time_clock"
+            app:layout_constraintRight_toLeftOf="@id/watermain_childlock"
+            app:layout_constraintTop_toTopOf="@id/watermain_time_clock"
+            app:waterThemeEnum="@{waterThemeEnum}" />
+
+        <ImageButton
+            android:id="@+id/watermain_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:paddingHorizontal="15dp"
+            android:paddingTop="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/watermain_theme1_set"
+            app:layout_constraintBottom_toBottomOf="@id/watermain_time_clock"
+            app:layout_constraintRight_toLeftOf="@id/watermain_wifistatus"
+            app:layout_constraintTop_toTopOf="@id/watermain_time_clock"
+            app:waterThemeEnum="@{waterThemeEnum}" />
+
+        <com.viomi.ovensocommon.view.EnglishTextClock
+            android:id="@+id/watermain_time_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="60dp"
+            android:fontFamily="@font/bebas_neue_bold"
+            android:paddingTop="30dp"
+            android:textSize="70sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:waterThemeEnum="@{waterThemeEnum}"
+            tools:text="@string/time_format"
+            tools:textColor="@color/color_white" />
+
+        <TextView
+            android:id="@+id/watermain_time_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="60dp"
+            android:fontFamily="@font/bebas_neue_bold"
+            android:paddingTop="30dp"
+            android:text="@string/machine_name"
+            android:textSize="50sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:waterThemeEnum="@{waterThemeEnum}"
+            tools:textColor="@color/color_white" />
+
+        <TextView
+            android:id="@+id/watermain_out"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="50dp"
+            android:drawableLeft="@{waterStatus.waterTipDrawable}"
+            android:gravity="center"
+            android:paddingHorizontal="210dp"
+            android:text="@{waterStatus.waterTip}"
+            android:textColor="@color/white"
+            android:textSize="38sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/temperature_control_layout"
+            app:layout_constraintStart_toStartOf="@id/temperature_control_layout"
+            app:waterThemeEnum="@{waterThemeEnum}"
+            tools:background="@drawable/selector_watermain_theme1_button"
+            tools:drawableLeft="@drawable/watermain_theme_out"
+            tools:text="@string/water_out" />
+
+
+        <TextView
+            android:id="@+id/watermain_apktime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="@string/app_buildTime" />
+
+        <com.viomi.waterpurifier.edison.widget.WaterMainTestView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

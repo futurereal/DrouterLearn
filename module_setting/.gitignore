@@ -1,0 +1,13 @@
+/build
+local.properties
+.gradle/6.1.1/gc.properties
+.gradle/6.1.1/fileChanges/last-build.bin
+.gradle/6.1.1/fileHashes/fileHashes.lock
+.gradle/checksums/checksums.lock
+.gradle/vcs-1/gc.properties
+.idea/.gitignore
+.idea/gradle.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/modules/module_setting.iml

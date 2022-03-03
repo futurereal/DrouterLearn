@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_fridge_gradient_corner_12"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/tvPropTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="属性主动上报展示"
+        android:textColor="#ffffff"
+        android:textSize="34dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvErrNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="失败:0/0"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvBusyNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="繁忙:0"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="@id/tvErrNum"
+        app:layout_constraintTop_toBottomOf="@id/tvErrNum" />
+
+    <TextView
+        android:id="@+id/tvTimeOutNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="超时:0"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="@id/tvBusyNum"
+        app:layout_constraintTop_toBottomOf="@id/tvBusyNum" />
+
+    <TextView
+        android:id="@+id/tvDataErrNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="错数据:0"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="@id/tvTimeOutNum"
+        app:layout_constraintTop_toBottomOf="@id/tvTimeOutNum" />
+
+    <TextView
+        android:id="@+id/tvRxErrNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="断连:0"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="@id/tvDataErrNum"
+        app:layout_constraintTop_toBottomOf="@id/tvDataErrNum" />
+
+    <TextView
+        android:id="@+id/tvPropInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        tools:text="dakgjkadjgkdasjfkd\najdkgjaksdf"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPropTitle" />
+
+    <TextView
+        android:id="@+id/tvEventInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="事件上报："
+        android:textColor="#ffffff"
+        android:textSize="22dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPropInfo" />
+
+    <Button
+        android:id="@+id/btnGetProp"
+        style="@style/factory_test_btn1"
+        android:text="gerprop已暂停"
+        android:visibility="visible"
+        android:layout_marginVertical="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEventInfo" />
+
+    <TextView
+        android:id="@+id/tvTitleQuickCool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="冷藏室:2℃"
+        android:textColor="#ffffff"
+        android:textSize="22dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnGetProp" />
+
+    <LinearLayout
+        android:id="@+id/llBarQuickCool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@id/tvTitleQuickCool"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleQuickCool">
+
+        <TextView
+            android:id="@+id/tvSetQuickCoolTmp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="120dp"
+            android:text="设置温度:2℃"
+            android:textColor="#ffffff"
+            android:textSize="22dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvBarCoolNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="120dp"
+                android:text="滑动条对应温度:2℃"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+            <SeekBar
+                android:id="@+id/barQuickCool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:maxHeight="4dp"
+                android:progressDrawable="@drawable/seekbardrawable"
+                android:thumb="@mipmap/round_seek" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llQuickCool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@id/llBarQuickCool"
+        app:layout_constraintTop_toBottomOf="@id/llBarQuickCool">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvQuickCoolSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/selector_fridge_room_switch"
+            android:drawablePadding="5dp"
+            android:gravity="center_horizontal"
+            android:text="关闭"
+            android:textColor="#ffffff"
+            android:textSize="22dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvQuickCoolTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/icon_fridge_room_temp"
+            android:drawablePadding="5dp"
+            android:gravity="center_horizontal"
+            android:text="温度设置"
+            android:textColor="#ffffff"
+            android:textSize="22dp"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvQuickCool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/selector_fridge_quick_cold"
+            android:drawablePadding="5dp"
+            android:gravity="center_horizontal"
+            android:text="速冷"
+            android:textColor="#ffffff"
+            android:textSize="22dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTitleQuickFreeze"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="冷冻室:-15℃"
+        android:textColor="#ffffff"
+        android:textSize="22dp"
+        app:layout_constraintLeft_toLeftOf="@id/llQuickCool"
+        app:layout_constraintTop_toBottomOf="@id/llQuickCool" />
+
+    <LinearLayout
+        android:id="@+id/llBarQuickFreeze"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@id/tvTitleQuickFreeze"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleQuickFreeze">
+
+        <TextView
+            android:id="@+id/tvSetQuickFreezeTmp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="120dp"
+            android:text="设置温度:-15℃"
+            android:textColor="#ffffff"
+            android:textSize="22dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvBarFreezeNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="120dp"
+                android:text="滑动条对应温度:-15℃"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+            <SeekBar
+                android:id="@+id/barQuickFreeze"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:maxHeight="4dp"
+                android:progressDrawable="@drawable/seekbardrawable"
+                android:thumb="@mipmap/round_seek" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llQuicFreeze"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@id/llBarQuickFreeze"
+        app:layout_constraintTop_toBottomOf="@id/llBarQuickFreeze">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvQuickFreezeSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/selector_fridge_room_switch"
+            android:drawablePadding="5dp"
+            android:gravity="center_horizontal"
+            android:text="关闭"
+            android:textColor="#ffffff"
+            android:textSize="22dp"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvQuickFreezeTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/icon_fridge_room_temp"
+            android:drawablePadding="5dp"
+            android:gravity="center_horizontal"
+            android:text="温度设置"
+            android:textColor="#ffffff"
+            android:textSize="22dp"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvQuickFreeze"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/selector_fridge_quick_freezing"
+            android:drawablePadding="5dp"
+            android:gravity="center_horizontal"
+            android:text="速冻"
+            android:textColor="#ffffff"
+            android:textSize="22dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llModeMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/llQuicFreeze">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvSmart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/selector_fridge_mode_smart"
+            android:drawablePadding="5dp"
+            android:gravity="center_horizontal"
+            android:text="智能模式"
+            android:textColor="#ffffff"
+            android:textSize="22dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvHoliday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/selector_fridge_mode_holiday"
+            android:drawablePadding="5dp"
+            android:gravity="center_horizontal"
+            android:text="假日模式"
+            android:textColor="#ffffff"
+            android:textSize="22dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvManual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/selector_fridge_mode_manual"
+            android:drawablePadding="5dp"
+            android:gravity="center_horizontal"
+            android:text="手动模式"
+            android:textColor="#ffffff"
+            android:textSize="22dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llFactory1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/llModeMenu"
+        android:paddingTop="30dp"
+        android:paddingBottom="15dp">
+
+        <Button
+            android:id="@+id/factory_test_self_checking"
+            style="@style/factory_test_btn"
+            android:text="自检" />
+
+        <Button
+            android:id="@+id/factory_test_frost_force"
+            style="@style/factory_test_btn"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="强制化霜" />
+
+        <Button
+            android:id="@+id/factory_test_fan_status"
+            style="@style/factory_test_btn"
+            android:layout_marginEnd="20dp"
+            android:visibility="gone"
+            android:text="风机状态" />
+
+        <Button
+            android:id="@+id/factory_test_rcf_force"
+            style="@style/factory_test_btn"
+            android:text="强制不停机" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llFactory2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/llFactory1"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
+
+        <Button
+            android:id="@+id/factory_test_hardware_check"
+            style="@style/factory_test_btn"
+            android:layout_marginEnd="20dp"
+            android:text="硬件自检"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/factory_test_heater"
+            style="@style/factory_test_btn"
+            android:text="翻转梁加热器"
+            android:layout_marginEnd="20dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/factory_time_cut"
+            style="@style/factory_test_btn"
+            android:text="缩时"
+            android:layout_marginEnd="20dp"
+            android:visibility="visible" />
+        <Button
+            android:id="@+id/factory_test_shang_check"
+            style="@style/factory_test_btn"
+            android:text="商检"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/otaProgress"
+        android:visibility="invisible"
+        android:background="#e5e5e5"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnOta"
+        android:layout_marginTop="10dp"
+        android:max="100"
+        android:progress="0" />
+
+    <Button
+        android:id="@+id/btnOta"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:text="OTA"
+        android:textSize="22dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

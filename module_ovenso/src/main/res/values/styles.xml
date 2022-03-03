@@ -1,0 +1,52 @@
+<resources>
+    <!-- 透明activity -->
+    <style name="TranslucentTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="MyDialog" parent="Theme.AppCompat.Dialog">
+        <!-- 背景颜色及透明程度 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 是否没有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 设置背景模糊的透明度-->
+        <item name="android:backgroundDimAmount">0.85</item>
+        <!--模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!--    主页按钮的样式-->
+    <style name="main_imgbutton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:padding">15dp</item>
+        <item name="background">@android:color/white</item>
+        <item name="layout_constraintDimensionRatio">1</item>
+        <item name="layout_constraintVertical_weight">1</item>
+        <item name="layout_constraintVertical_chainStyle">spread_inside</item>
+    </style>
+
+    <declare-styleable name="modeType">
+        <attr name="firepowerDefineTwo" format="integer" />
+        <attr name="firepowerDefine" format="integer" />
+        <attr name="firepowerRangeMax" format="integer" />
+        <attr name="firepowerRangeMin" format="integer" />
+        <attr name="iconBig" format="string" />
+        <attr name="iconBigCombine" format="string" />
+        <attr name="iconSmall" format="string" />
+        <attr name="modeId" format="integer" />
+        <attr name="modeKey" format="string" />
+        <attr name="cookType" format="string" />
+        <attr name="modeName" format="string" />
+        <attr name="timeDefine" format="float" />
+        <attr name="timeRangeMax" format="float" />
+        <attr name="timeRangeMin" format="float" />
+        <attr name="childModeIdList" format="reference" />
+    </declare-styleable>
+</resources>

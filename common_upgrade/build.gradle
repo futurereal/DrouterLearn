@@ -1,0 +1,108 @@
+/*apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'maven'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+                abiFilters 'armeabi-v7a', 'arm64-v8a'
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation "androidx.work:work-runtime-ktx:2.4.0"
+    implementation "androidx.work:work-rxjava2:2.4.0"
+    implementation "androidx.work:work-gcm:2.4.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.4.0"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.0"
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation "com.squareup.okhttp3:logging-interceptor:3.9.1"
+    implementation "com.blankj:utilcode:1.25.9"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+}
+
+//======================github====================================
+ext {
+    // 这个路径是从gitlab上Clone的本地路径
+    GITHUB_REPO_PATH = "../../viomi_repository"
+    PUBLISH_GROUP_ID = 'com.viomi.common_upgrade'
+    PUBLISH_ARTIFACT_ID = 'viomi-upgrade-lib'
+    PUBLISH_VERSION = '1.1.0'
+}
+
+uploadArchives {
+    repositories.mavenDeployer {
+        def deployPath = file(project.GITHUB_REPO_PATH)
+        repository(url: "file://${deployPath.absolutePath}")
+        pom.project {
+            groupId project.PUBLISH_GROUP_ID
+            artifactId project.PUBLISH_ARTIFACT_ID
+            version project.PUBLISH_VERSION
+        }
+    }
+}*/
+def isModuleLibary = isLibary.toBoolean()
+apply from: "../build_config/base.gradle"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+android {
+    defaultConfig {
+        if (!isModuleLibary) {
+            applicationId "com.viomi.upgrade_lib"
+            /*升级的sdk 需要用*/
+            versionCode 1
+            versionName "1.0.0"
+        }
+    }
+
+}
+dependencies {
+    implementation rootProject.ext.dependencies["gson"]
+    api project(path: ':module_common')
+    implementation rootProject.ext.dependencies["retrofit"]
+    implementation rootProject.ext.dependencies["retrofit2-fastjson-converter"]
+    implementation rootProject.ext.dependencies["adapter-rxjava"]
+    implementation rootProject.ext.dependencies["converter-gson"]
+
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.4.0"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.0"
+
+    implementation "androidx.work:work-runtime-ktx:2.4.0"
+    implementation "androidx.work:work-rxjava2:2.4.0"
+    implementation "androidx.work:work-gcm:2.4.0"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.0"
+}

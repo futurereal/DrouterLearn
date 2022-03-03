@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<set_menus xmlns:modulesetting="http://schemas.android.com/apk/res/com.viomi.waterpurifier.edison">
+    <!--  http://schemas.android.com/apk/res/com.viomi.ovenso  必须和当前应用的包名字一直否则会编译不过报错-->
+    <!--  http://schemas.android.com/apk/res/com.viomi.waterpurifier.edison-->
+    <!--  http://schemas.android.com/apk/res/com.viomi.ovenso.microwave-->
+    <!--  http://schemas.android.com/apk/res/com.viomi.modulesetting-->
+    <menu
+        modulesetting:menuIcon="menuheader_default"
+        modulesetting:menuKey="head"
+        modulesetting:menuName="未登录"
+        modulesetting:menuRoutePath="/modulesetting/AccountInfoFragment" />
+
+    <menu
+        modulesetting:menuIcon="water_set_wifi"
+        modulesetting:menuKey="wifi"
+        modulesetting:menuName="WIFI设置"
+        modulesetting:menuRoutePath="/modulesetting/WlanSetFragment"
+        modulesetting:menuStatus="关闭" />
+
+    <menu
+        modulesetting:menuIcon="water_set_hotspot"
+        modulesetting:menuKey="hotspot"
+        modulesetting:menuName="设备热点"
+        modulesetting:menuRoutePath="/modulesetting/HotSpotFragment"
+        modulesetting:menuStatus="关闭" />
+
+    <menu
+        modulesetting:menuIcon="water_set_theme"
+        modulesetting:menuKey="themeWater"
+        modulesetting:menuName="主题设置"
+        modulesetting:menuRoutePath="/water/WaterThemeFragment" />
+
+    <menu
+        modulesetting:menuIcon="water_set_tmp"
+        modulesetting:menuKey="temperature"
+        modulesetting:menuName="温度设置"
+        modulesetting:menuRoutePath="/water/TempFragment" />
+
+    <menu
+        modulesetting:menuIcon="water_set_cup_size"
+        modulesetting:menuKey="cup"
+        modulesetting:menuName="杯量设置"
+        modulesetting:menuRoutePath="/water/CupFragment"
+        modulesetting:menuStatus="小杯" />
+    <menu
+        modulesetting:menuIcon="water_set_lock"
+        modulesetting:menuKey="childLock"
+        modulesetting:menuName="童锁设置"
+        modulesetting:menuRoutePath="/water/ChildLockFragment"
+        modulesetting:menuStatus="关闭" />
+    <menu
+        modulesetting:menuIcon="water_set_mineral"
+        modulesetting:menuKey="mineral"
+        modulesetting:menuName="矿物质设置"
+        modulesetting:menuRoutePath="/water/MineralFragment"
+        modulesetting:menuStatus="低矿" />
+
+    <menu
+        modulesetting:menuIcon="water_set_filter"
+        modulesetting:menuKey="filter"
+        modulesetting:menuName="滤芯功能"
+        modulesetting:menuRoutePath="/water/FilterFragment" />
+
+    <menu
+        modulesetting:menuIcon="water_set_screen"
+        modulesetting:menuKey="screen"
+        modulesetting:menuName="屏幕与声音"
+        modulesetting:menuRoutePath="/modulesetting/ScreenVolumeFragment" />
+
+
+    <menu
+        modulesetting:menuIcon="water_set_date"
+        modulesetting:menuKey="date"
+        modulesetting:menuName="日期与时间"
+        modulesetting:menuRoutePath="/modulesetting/DateTimeFragment" />
+
+    <menu
+        modulesetting:menuIcon="water_set_about"
+        modulesetting:menuKey="aboutSoft"
+        modulesetting:menuName="关于软件"
+        modulesetting:menuRoutePath="/modulesetting/AboutSoftwareFragment" />
+    <menu
+        modulesetting:menuIcon="water_set_theme"
+        modulesetting:menuKey="themeOvenso"
+        modulesetting:menuName="主题设置"
+        modulesetting:menuRoutePath="/ovenso/OvenThemeFragment" />
+</set_menus>

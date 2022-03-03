@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:background="@color/black">
+
+
+        <TextView
+            android:id="@+id/target_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.5"
+            android:fontFamily="@font/din_cond_bold"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+            android:textSize="32dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="120" />
+
+        <TextView
+            android:id="@+id/target_temperature_unite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.5"
+            android:text="@string/temperature_single"
+            android:textColor="@android:color/white"
+            android:textSize="10dp"
+            app:layout_constraintLeft_toRightOf="@id/target_temperature"
+            app:layout_constraintTop_toTopOf="@id/target_temperature" />
+
+        <ImageView
+            android:id="@+id/target_temperature_arrow"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="5dp"
+            android:alpha="0.5"
+            android:src="@drawable/temperature_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/target_temperature"
+            app:layout_constraintLeft_toRightOf="@id/target_temperature_unite"
+            app:layout_constraintTop_toTopOf="@id/target_temperature" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

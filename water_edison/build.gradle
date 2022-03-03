@@ -1,0 +1,27 @@
+apply from: "../build_config/common.gradle"
+def isModuleLibary = isLibary.toBoolean()
+android {
+    dataBinding {
+        enabled true
+    }
+
+    defaultConfig {
+        if (!isModuleLibary) {
+            applicationId "com.viomi.waterpurifier.edison.test"
+            versionCode 5
+            versionName "1.0.5"
+        }
+    }
+
+}
+
+dependencies {
+    implementation rootProject.ext.dependencies["conscrypt-android"]
+    implementation rootProject.ext.dependencies["rxjava"]
+    implementation rootProject.ext.dependencies["rxandroid"]
+    implementation rootProject.ext.dependencies["converter-gson"]
+    implementation rootProject.ext.dependencies["easy-permissions"]
+    implementation rootProject.ext.dependencies["lottie"]
+    implementation project(path: ':module_common')
+
+}

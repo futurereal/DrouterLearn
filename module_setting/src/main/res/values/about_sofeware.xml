@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="aboutSofewareTitles">
+        <item>@string/aboutsofe_menu_sofeversion</item>
+        <item>@string/aboutsofe_menu_firmversion</item>
+        <item>@string/aboutsofe_menu_systemversion</item>
+        <item>@string/aboutsofe_menu_netname</item>
+        <item>@string/aboutsofe_menu_hotline</item>
+        <item>@string/aboutsofe_menu_resetsystem</item>
+        <item>@string/reset_system_title</item>
+        <item>@string/aboutsofe_menu_uploadlog</item>
+        <item>@string/aboutsofe_menu_systemsetting</item>
+        <item>@string/aboutsofe_menu_factorytest</item>
+    </string-array>
+
+    <string-array name="aboutSoftwareContentDefault">
+        <item>v1.0.0</item>
+        <item>v0</item>
+        <item>vimomi</item>
+        <item>macAndDid</item>
+        <item>400-100-2632</item>
+        <item>empty</item>
+        <item>empty</item>
+        <item>empty</item>
+        <item>empty</item>
+        <item>empty</item>
+    </string-array>
+    <string-array name="aboutSofewareRout">
+        <item>moduleset/sofeversion</item>
+        <item>moduleset/firmversion</item>
+        <item>moduleset/systemversion</item>
+        <item>empty</item>
+        <item>empty</item>
+        <item>moduleset/reset</item>
+        <item>moduleset/reboot</item>
+        <item>moduleset/uploadlog</item>
+        <item>moduleset/set</item>
+        <item>moduleset/factory</item>
+    </string-array>
+</resources>

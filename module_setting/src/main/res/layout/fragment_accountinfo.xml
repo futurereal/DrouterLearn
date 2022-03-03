@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/menufragment_unselect"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+
+        <ImageView
+            android:id="@+id/accountinfo_notlogin_banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/accountinfo_nologin_horizen"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/miot_deal_title"
+            style="@style/setting_normal_text_horizontal_style"
+            android:text="@string/mi_iot_account"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="@id/accountinfo_miot_deal"
+            app:layout_constraintStart_toStartOf="@id/accountinfo_notlogin_banner"
+            app:layout_constraintTop_toTopOf="@id/accountinfo_miot_deal" />
+
+
+        <Button
+            android:id="@+id/accountinfo_miot_deal"
+            style="@style/setting_normal_text_horizontal_style.gray"
+            android:background="@null"
+            android:drawableRight="@drawable/icon_manage_arrow"
+            android:gravity="center_vertical"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="@string/mi_iot_no_bind"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="@id/accountinfo_notlogin_banner"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/accountinfo_notlogin_banner" />
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_miot_deal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="accountinfo_notlogin_banner,miot_deal_title,accountinfo_miot_deal"
+            tools:visibility="visible" />
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/accountinfo_head"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            fresco:roundAsCircle="true"
+            tools:background="@color/white" />
+
+        <TextView
+            android:id="@+id/accountinfo_head_title"
+            style="@style/setting_normal_text_horizontal_style"
+            android:text="@string/head_label"
+            app:layout_constraintBottom_toBottomOf="@+id/accountinfo_head"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/accountinfo_head" />
+
+        <TextView
+            android:id="@+id/accountinfo_name"
+            style="@style/setting_normal_text_horizontal_style.gray"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accountinfo_head"
+            tools:text="@string/name_label" />
+
+
+        <TextView
+            android:id="@+id/accountinfo_name_title"
+            style="@style/setting_normal_text_horizontal_style"
+            android:text="@string/name_label"
+            app:layout_constraintBottom_toBottomOf="@id/accountinfo_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/accountinfo_name" />
+
+        <TextView
+            android:id="@+id/accountinfo_id"
+            style="@style/setting_normal_text_horizontal_style.gray"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/accountinfo_name"
+            tools:text="@string/viomi_no_label" />
+
+
+        <TextView
+            android:id="@+id/accountinfo_id_title"
+            style="@style/setting_normal_text_horizontal_style"
+            android:text="@string/viomi_no_label"
+            app:layout_constraintBottom_toBottomOf="@id/accountinfo_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/accountinfo_id" />
+
+        <TextView
+            android:id="@+id/accountinfo_miot_status"
+            style="@style/setting_normal_text_horizontal_style.gray"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/accountinfo_id"
+            tools:text="@string/never_login" />
+
+        <TextView
+            android:id="@+id/accountinfo_miot_title"
+            style="@style/setting_normal_text_horizontal_style"
+            android:text="@string/mi_iot_account"
+            app:layout_constraintBottom_toBottomOf="@id/accountinfo_miot_status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/accountinfo_miot_status" />
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="accountinfo_head,accountinfo_head_title,accountinfo_name_title,accountinfo_name,
+            accountinfo_id_title,accountinfo_id,accountinfo_miot_status,accountinfo_miot_title"
+            tools:visibility="gone" />
+
+
+        <Button
+            android:id="@+id/accountinfo_viot_login"
+            style="@style/font_style_sc_medium"
+            android:layout_width="320dp"
+            android:layout_height="78dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/shape_green_btn"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/login_now"
+            android:textColor="@color/color_white"
+            android:textSize="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:background="#171717"
+    tools:gravity="center_horizontal"
+    tools:layout_width="86dp">
+
+    <com.viomi.ovenso.view.LinearLayoutSel
+        android:id="@+id/include_finish"
+        android:layout_width="217dp"
+        android:layout_height="84dp"
+        android:background="@drawable/shape_solid_trans20_cor12"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/common_back" />
+
+        <TextView
+            style="@style/font_style_sc_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:text="@string/ovenso_finish"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+    </com.viomi.ovenso.view.LinearLayoutSel>
+</merge>

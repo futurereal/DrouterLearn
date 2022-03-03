@@ -1,0 +1,30 @@
+插件端 执行 菜谱的流程
+
+1  下发属性变化的指令：
+   执行： MiotDataDealMethod 的  new Customoven.PropertySetter()
+         设置属性 普通菜谱 和自定义菜谱有区别的
+         Control.setProp
+2   下发开始的指令
+    执行　ViomiApplication　的 VIotHostManager.Companion.getInstance().registerActionCallback
+
+    onAction 的回调
+
+
+自定义菜谱的设置 流程：
+
+    MiotDataDealMethod  的 new Customrecipes.PropertySetter()
+    设置定义菜单  Android 屏幕负责 存储属性到本地  方便后续 进行读取
+
+     new Customrecipes.PropertyGetter() 用户 上传本地的 自定义菜谱 给 插件端
+
+
+
+     收藏的处理逻辑
+
+    MiotDataDealMethod  getCollectlist() 的 获取本地缓存的收藏的菜谱上传给插件
+
+
+
+
+
+

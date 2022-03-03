@@ -1,0 +1,14 @@
+<resources>
+    <string name="camera_video">视频</string>
+    <string name="camera_duration_type">00:00:00</string>
+    <string name="create_video">停止录像</string>
+    <string name="camera_picture">拍照</string>
+    <string name="version_low">版本太低，无法停止</string>
+    <string name="camera_test">悬浮窗拍照测试</string>
+    <string name="title_activity_main">ffmpeg cmd</string>
+    <string name="finish">处理完成</string>
+    <string name="begaindeal">开始处理</string>
+
+    <string name="cancel_text">取消</string>
+    <string name="sure_text">确定</string>
+</resources>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_theme1">
+
+        <com.viomi.ovensocommon.view.EnglishTextClock
+            android:id="@+id/ovenmain_time"
+            style="@style/font_style_sc_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:alpha="0.8"
+            android:includeFontPadding="false"
+            android:paddingLeft="20dp"
+            android:textColor="@color/text_clock"
+            android:textSize="26sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/ovenso_time_format" />
+
+        <ImageView
+            android:id="@+id/ovenmain_wifistatus"
+            style="@style/main_imgbutton"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/select_wifi"
+            app:layout_constraintBottom_toTopOf="@id/ovenmain_message"
+            app:layout_constraintLeft_toLeftOf="@id/ovenmain_time"
+            app:layout_constraintRight_toRightOf="@id/ovenmain_time"
+            app:layout_constraintTop_toTopOf="@id/cardContainers" />
+
+        <ImageView
+            android:id="@+id/ovenmain_message"
+            style="@style/main_imgbutton"
+            android:src="@drawable/select_msg"
+            app:layout_constraintBottom_toTopOf="@id/ovenmain_pannel_camera"
+            app:layout_constraintLeft_toLeftOf="@id/ovenmain_wifistatus"
+            app:layout_constraintRight_toRightOf="@id/ovenmain_wifistatus"
+            app:layout_constraintTop_toBottomOf="@id/ovenmain_wifistatus" />
+
+        <ImageView
+            android:id="@+id/ovenmain_pannel_camera"
+            style="@style/main_imgbutton"
+            app:layout_constraintBottom_toTopOf="@id/ovenmain_Light"
+            app:layout_constraintLeft_toLeftOf="@id/ovenmain_message"
+            app:layout_constraintRight_toRightOf="@id/ovenmain_message"
+            app:layout_constraintTop_toBottomOf="@id/ovenmain_message"
+            tools:src="@drawable/select_light" />
+
+        <ImageView
+            android:id="@+id/ovenmain_Light"
+            style="@style/main_imgbutton"
+            android:layout_marginBottom="40dp"
+            android:src="@drawable/select_light"
+            app:layout_constraintBottom_toBottomOf="@id/cardContainers"
+            app:layout_constraintLeft_toLeftOf="@id/ovenmain_pannel_camera"
+            app:layout_constraintRight_toRightOf="@id/ovenmain_pannel_camera"
+            app:layout_constraintTop_toBottomOf="@id/ovenmain_pannel_camera" />
+
+        <com.viomi.ovenso.view.CardSlidingView
+            android:id="@+id/cardContainers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/ovenmain_message"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.viomi.ovenso.view.CardHomeMenuView
+                android:id="@+id/menuCook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:imgSrc="@drawable/menu_pengren"
+                app:menuName="@string/menu_pengren" />
+
+            <com.viomi.ovenso.view.CardHomeMenuView
+                android:id="@+id/menuAssistant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:imgSrc="@drawable/menu_fuzhu"
+                app:menuName="@string/menu_fuzhu" />
+
+            <com.viomi.ovenso.view.CardHomeMenuView
+                android:id="@+id/menuTuijian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:imgSrc="@drawable/menu_recipe"
+                app:menuName="@string/menu_recipe" />
+
+            <com.viomi.ovenso.view.CardHomeMenuView
+                android:id="@+id/menuMyFood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:imgSrc="@drawable/menu_my_recipe"
+                app:menuName="@string/ovenso_my_recipe" />
+
+            <com.viomi.ovenso.view.CardHomeMenuView
+                android:id="@+id/menuSet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:imgSrc="@drawable/menu_shezhi"
+                app:menuName="@string/menu_shezhi" />
+        </com.viomi.ovenso.view.CardSlidingView>
+
+        <com.viomi.ovenso.ui.view.OvenMainTestView
+            android:id="@+id/ovenmain_testview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:visibility="gone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

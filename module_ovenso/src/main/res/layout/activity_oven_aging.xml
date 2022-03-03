@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_theme1">
+
+        <ImageView
+            android:id="@+id/ovenagin_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="15dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_title_bar_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvBarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:ems="1"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:maxLength="6"
+            android:text="@string/ovenaging_title"
+            android:textColor="@android:color/white"
+            android:textSize="34dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/basetitle_back"
+            app:layout_constraintRight_toRightOf="@id/basetitle_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ovenaging_Light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:padding="15dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/select_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/ovenagin_back"
+            app:layout_constraintRight_toRightOf="@id/ovenagin_back" />
+
+        <ImageView
+            android:id="@+id/imgReicpeBg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:src="@drawable/icon_work_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvBarTitle"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.viomi.ovenso.view.RotateImage
+            android:id="@+id/imgRotate1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cookrun_rotate1"
+            app:layout_constraintBottom_toBottomOf="@id/imgReicpeBg"
+            app:layout_constraintLeft_toLeftOf="@id/imgReicpeBg"
+            app:layout_constraintRight_toRightOf="@id/imgReicpeBg"
+            app:layout_constraintTop_toTopOf="@id/imgReicpeBg" />
+
+        <com.viomi.ovenso.view.RotateImage
+            android:id="@+id/imgRotate2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cookrun_rotate2"
+            app:layout_constraintBottom_toBottomOf="@id/imgReicpeBg"
+            app:layout_constraintLeft_toLeftOf="@id/imgReicpeBg"
+            app:layout_constraintRight_toRightOf="@id/imgReicpeBg"
+            app:layout_constraintTop_toTopOf="@id/imgReicpeBg" />
+
+        <ImageView
+            android:id="@+id/imgWoking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_working_bg"
+            app:layout_constraintBottom_toBottomOf="@id/imgReicpeBg"
+            app:layout_constraintLeft_toLeftOf="@id/imgReicpeBg"
+            app:layout_constraintRight_toRightOf="@id/imgReicpeBg"
+            app:layout_constraintTop_toTopOf="@id/imgReicpeBg" />
+
+        <TextView
+            android:id="@+id/tvStep"
+            style="@style/text_white_normal"
+            android:textSize="90dp"
+            app:layout_constraintBottom_toBottomOf="@id/imgReicpeBg"
+            app:layout_constraintLeft_toLeftOf="@id/imgReicpeBg"
+            app:layout_constraintRight_toRightOf="@id/imgReicpeBg"
+            app:layout_constraintTop_toTopOf="@id/imgReicpeBg"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/current_mode"
+            style="@style/text_white_center"
+            android:text="@string/ovenaging_current_mode"
+            app:layout_constraintBottom_toTopOf="@id/tvNowTemp"
+            app:layout_constraintLeft_toRightOf="@id/imgWoking"
+            app:layout_constraintRight_toLeftOf="@id/llMenu"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNowTemp"
+            style="@style/text_white_center"
+            android:text="@string/ovenaging_currenttemp_title"
+            app:layout_constraintBottom_toTopOf="@id/tvWorkStatus"
+            app:layout_constraintLeft_toLeftOf="@id/current_mode"
+            app:layout_constraintTop_toBottomOf="@id/current_mode" />
+
+        <TextView
+            android:id="@+id/tvWorkStatus"
+            style="@style/text_white_center"
+            android:text="@string/ovenaging_workstatus_title"
+            app:layout_constraintBottom_toTopOf="@id/left_time"
+            app:layout_constraintLeft_toLeftOf="@id/current_mode"
+            app:layout_constraintTop_toBottomOf="@id/tvNowTemp" />
+
+        <TextView
+            android:id="@+id/left_time"
+            style="@style/text_white_center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/current_mode"
+            app:layout_constraintTop_toBottomOf="@id/tvWorkStatus"
+            tools:text="@string/ovenaging_left_time" />
+
+        <LinearLayout
+            android:id="@+id/llMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="48dp"
+            android:divider="@drawable/divider_ver30"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                android:id="@+id/include_start"
+                layout="@layout/layout_btn_start" />
+
+            <include
+                android:id="@+id/include_over"
+                layout="@layout/layout_btn_overfinish"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvPropView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="140dp"
+            android:layout_marginRight="40dp"
+            android:textColor="@color/red"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            style="@style/text_white_center"
+            android:layout_marginTop="20dp"
+            android:textSize="44dp"
+            android:visibility="visible"
+            app:layout_constraintLeft_toRightOf="@id/imgWoking"
+            app:layout_constraintRight_toLeftOf="@id/llMenu"
+            app:layout_constraintTop_toBottomOf="@id/tvPropView"
+            tools:text="@string/ovenaging_result_failt" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

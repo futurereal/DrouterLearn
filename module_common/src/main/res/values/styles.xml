@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="text_white_normal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="text_white_center">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="layout_constraintVertical_chainStyle">packed</item>
+    </style>
+
+    <!--    主页按钮的样式-->
+    <style name="basetitle_imgbutton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:padding">20dp</item>
+        <item name="background">@android:color/white</item>
+        <item name="layout_constraintVertical_chainStyle">spread_inside</item>
+    </style>
+
+
+    <style name="activityAnim">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_top</item>
+        <!--     <item name="android:activityCloseEnterAnimation">@anim/slide_in_top</item>
+             <item name="android:activityCloseExitAnimation">@anim/slide_out_bottom</item>-->
+    </style>
+
+    <style name="font_style_sc_bold"></style>
+
+    <style name="font_style_sc_medium"></style>
+
+    <style name="font_style_sc_regular"></style>
+
+
+    <!-- 设置的标题栏，这里主要是设置文字大小和颜色 -->
+    <declare-styleable name="TitleBar">
+        <attr name="set_title_text" format="string" />
+        <attr name="set_title_text_size" format="dimension" />
+        <attr name="set_title_text_color" format="color" />
+    </declare-styleable>
+
+    <!--开关 Switch-->
+    <declare-styleable name="SwitchButton">
+        <attr name="tintColor" format="reference|color" />
+        <attr name="outerStrokeWidth" format="reference|dimension" />
+        <attr name="shadowSpace" format="reference|dimension" />
+    </declare-styleable>
+
+</resources>

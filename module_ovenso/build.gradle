@@ -1,0 +1,39 @@
+def isModuleLibary = isLibary.toBoolean()
+apply from: "../build_config/common.gradle"
+// 定义 是否是测试环境的升级渠道 和 VIOT进程是否打印全部日志
+def TYPE_DEBUG = true
+//实时显示属性数据
+def SHOW_LOGVIEW = true
+
+android {
+    dataBinding {
+        enabled true
+    }
+
+    defaultConfig {
+        if (!isModuleLibary) {
+            applicationId "com.viomi.ovenso.microwave.test"
+            versionCode 300
+            versionName "3.0.0"
+        }
+        buildConfigField("boolean", "TYPE_DEBUG", "$TYPE_DEBUG")
+        buildConfigField("boolean", "SHOW_LOGVIEW", "$SHOW_LOGVIEW")
+        //渲染的目标Api   一定要加
+        renderscriptTargetApi 19
+        //开启渲染模式支持  一定要加  Enable RS support　　　　
+        renderscriptSupportModeEnabled true
+    }
+}
+
+dependencies {
+
+    implementation rootProject.ext.dependencies["converter-gson"]
+    implementation rootProject.ext.dependencies["adapter-rxjava"]
+    //图片处理
+    implementation rootProject.ext.dependencies["lifecycle-viewmodel"]
+    implementation rootProject.ext.dependencies["lifecycle-livedata"]
+    implementation rootProject.ext.dependencies["fresco"]
+//    implementation rootProject.ext.dependencies["statistic"]
+    implementation project(':module_common')
+//    implementation project(':module_camera')
+}

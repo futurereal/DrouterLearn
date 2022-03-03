@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:background="@color/black">
+
+        <TextView
+            android:id="@+id/washitem_step_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="28dp"
+            android:paddingRight="28dp"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/washitem_step_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/filterwash_step_selector"
+            app:layout_constraintBottom_toTopOf="@id/washitem_step_name"
+            app:layout_constraintEnd_toEndOf="@id/washitem_step_name"
+            app:layout_constraintStart_toStartOf="@id/washitem_step_name" />
+
+        <View
+            android:id="@+id/washitem_step_line"
+            android:layout_width="150dp"
+            android:layout_height="8dp"
+            android:alpha="0.5"
+            android:background="@drawable/filterwash_stepline_selector"
+            app:layout_constraintBottom_toBottomOf="@id/washitem_step_icon"
+            app:layout_constraintStart_toEndOf="@id/washitem_step_icon"
+            app:layout_constraintTop_toTopOf="@id/washitem_step_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

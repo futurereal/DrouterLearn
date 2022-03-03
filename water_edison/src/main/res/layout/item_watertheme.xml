@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:background="@color/black">
+
+
+        <TextView
+            android:id="@+id/watertheme_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:textColor="@color/white"
+            android:textSize="34dp"
+            app:layout_constraintEnd_toEndOf="@+id/watertheme_item_type"
+            app:layout_constraintStart_toStartOf="@+id/watertheme_item_type"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/setting_theme" />
+
+
+        <ImageView
+            android:id="@+id/watertheme_item_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/watertheme_item_title"
+            tools:src="@drawable/watertheme_sample1" />
+
+        <ImageButton
+            android:id="@+id/watertheme_item_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/watertheme_selector"
+            app:layout_constraintEnd_toEndOf="@+id/watertheme_item_type"
+            app:layout_constraintStart_toStartOf="@+id/watertheme_item_type"
+            app:layout_constraintTop_toBottomOf="@+id/watertheme_item_type" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

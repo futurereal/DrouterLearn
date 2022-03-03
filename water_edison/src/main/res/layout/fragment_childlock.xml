@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dialog_water_quality_change_bg">
+
+        <TextView
+            android:id="@+id/childlock_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/setting_lock_on"
+            android:textColor="@android:color/white"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/childlock_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/dialog_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.viomi.waterpurifier.edison.widget.CircleProgressView
+            android:id="@+id/childlock_progress"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="255dp"
+            android:layout_marginRight="255dp"
+            android:text=""
+            android:textColor="#8AEDE2"
+            android:textSize="24dp"
+            android:visibility="visible"
+            app:drawable_srcid="@drawable/childlock_lock"
+            app:inner_color="@color/childlock_innerclolor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:outer_visible="true"
+            app:progress_current="1"
+            app:progress_max="100"
+            app:start_angle_degree="90"
+            app:texttip_unit="%"
+            tools:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/childlock_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/setting_child_lock"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="34dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/childlock_progress" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,8 @@
+apply from: "../build_config/common.gradle"
+dependencies {
+    // 日志库
+    api rootProject.ext.dependencies["viomi_vlog"]
+    // 工具类的库
+//    api rootProject.ext.dependencies["utilcode"]
+
+}

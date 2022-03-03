@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootBaseTitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@color/color_basetitle_bg">
+
+        <com.viomi.ovensocommon.view.EnglishTextClock
+            android:id="@+id/basetitle_time"
+            style="@style/font_style_sc_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.8"
+            android:includeFontPadding="false"
+            android:paddingLeft="20dp"
+            android:textColor="@color/text_clock"
+            android:textSize="26sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/ovenso_time_format" />
+
+        <ImageView
+            android:id="@+id/basetitle_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:scaleType="center"
+            android:src="@drawable/common_back"
+            app:layout_constraintLeft_toLeftOf="@id/basetitle_time"
+            app:layout_constraintRight_toRightOf="@id/basetitle_time"
+            app:layout_constraintTop_toBottomOf="@id/basetitle_time" />
+
+        <TextView
+            android:id="@+id/basetitle_title"
+            style="@style/font_style_sc_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:ems="1"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:maxLength="6"
+            android:textColor="@android:color/white"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/basetitle_show_menu"
+            app:layout_constraintRight_toRightOf="@id/basetitle_show_menu"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/basetitle_show_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:padding="20dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/basetitle_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/basetitle_time"
+            app:layout_constraintRight_toRightOf="@id/basetitle_time" />
+        <!--点击菜单栏延迟加载的布局-->
+        <ViewStub
+            android:id="@+id/basetitle_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout="@layout/viewstub_basetitle"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/basetitle_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/basetitle_time"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/order_group"
+        android:layout_width="846dp"
+        android:layout_height="436dp"
+        android:background="@drawable/bg_cor14ltrt">
+
+        <TextView
+            android:id="@+id/appoint_cancel"
+            style="@style/font_style_sc_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:includeFontPadding="false"
+            android:text="@string/oven_dialog_cancel"
+            android:textColor="#ccffffff"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toTopOf="@id/appoint_boundary_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/appoint_sure"
+            style="@style/font_style_sc_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="28dp"
+            android:includeFontPadding="false"
+            android:text="@string/oven_dialog_sure"
+            android:textColor="#cc28beca"
+            android:textSize="32dp"
+            app:layout_constraintBottom_toTopOf="@id/appoint_boundary_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/appoint_title"
+            style="@style/font_style_sc_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="34dp"
+            app:layout_constraintBottom_toTopOf="@id/appoint_boundary_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/appoint_boundary_layout"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="80dp"
+            android:background="#1affffff"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="147dp"
+            android:background="#33d8d8d8"
+            app:layout_constraintTop_toBottomOf="@id/appoint_boundary_layout" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="225dp"
+            android:background="#33d8d8d8"
+            app:layout_constraintTop_toBottomOf="@id/appoint_boundary_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

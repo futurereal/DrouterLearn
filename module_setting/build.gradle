@@ -1,0 +1,46 @@
+def isModuleLibary = isLibary.toBoolean()
+apply from: "../build_config/common.gradle"
+def OTA_LOCAL = false
+def TYPE_DEBUG = true
+android {
+    defaultConfig {
+        if (!isModuleLibary) {
+            applicationId "com.viomi.modulesetting"
+            /*升级的sdk 需要用*/
+            versionCode 1
+            versionName "1.0.0"
+        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+        renderscriptTargetApi 22
+        buildConfigField("boolean", "TYPE_DEBUG", "$TYPE_DEBUG")
+        buildConfigField("boolean", "OTA_LOCAL", "$OTA_LOCAL")
+    }
+    dexOptions {
+        javaMaxHeapSize "2g"
+        preDexLibraries = false
+        additionalParameters += '--multi-dex'
+        additionalParameters += '--set-max-idx-number=35000'
+        additionalParameters += '--minimal-main-dex'
+    }
+
+}
+dependencies {
+    // app升级库
+    implementation(rootProject.ext.dependencies["upgrade"]) { exclude group: 'com.blankj' }
+    // viot 上报 绑定的库，推送， 回捞日志
+    implementation(rootProject.ext.dependencies["viomi_viot"]) { exclude group: 'com.alibaba' }
+    //图片处理
+    implementation rootProject.ext.dependencies["fresco"]
+    implementation rootProject.ext.dependencies["imagepipeline-okhttp3"]
+    implementation rootProject.ext.dependencies["rxjava"]
+    implementation rootProject.ext.dependencies["rxandroid"]
+    implementation rootProject.ext.dependencies["autodispose"]
+    implementation rootProject.ext.dependencies["fastjson"]
+    implementation rootProject.ext.dependencies["retrofit"]
+    implementation rootProject.ext.dependencies["retrofit2-fastjson-converter"]
+    implementation rootProject.ext.dependencies["okhttp"]
+    implementation rootProject.ext.dependencies["zxing"]
+    implementation project(':module_common')
+}
+

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.viomi.camera">
+    <!--不能自动获取权限，需要手动允许处理-->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- A camera with burst capability is required to use this application -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature android:name="android.hardware.camera.any" />
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 相机相关的 -->
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:supportsRtl="true"
+        tools:ignore="HardcodedDebugMode">
+        <activity
+            android:name="com.viomi.camera.CameraTestActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"></activity>
+
+        <activity
+            android:name="com.viomi.ffmpeg.cmd.FFmpegCmdActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"></activity>
+
+        <activity
+            android:name="com.viomi.camera.CameraRecordActivity"
+            android:screenOrientation="landscape">
+
+        </activity>
+
+        <service
+            android:name="com.viomi.camera.CameraService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.viomi.ovenso.camera.video.CameraPreview" />
+                <action android:name="com.viomi.ovenso.camera.video.CameraVideoStart" />
+                <action android:name="com.viomi.ovenso.camera.video.CameraVideoRestart" />
+                <action android:name="com.viomi.ovenso.camera.video.CameraVideoPause" />
+                <action android:name="com.viomi.ovenso.camera.video.CameraVideoStop" />
+                <action android:name="com.viomi.ovenso.camera.video.preview.reduce" />
+                <action android:name="com.viomi.ovenso.camera.video.preview.increase" />
+                <action android:name="com.viomi.ovenso.camera.video.preview.remove" />
+                <action android:name="com.viomi.ovenso.camera.video.stop.service" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

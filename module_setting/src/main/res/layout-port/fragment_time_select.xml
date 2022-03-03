@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bottom_dialog_bg">
+
+        <TextView
+            android:id="@+id/timeselect_title"
+            style="@style/font_style_sc_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="32dp"
+            android:textColor="@color/color_white"
+            android:textSize="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/sound_stanby_time" />
+
+        <TextView
+            android:id="@+id/timeselect_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="@string/time_cancel"
+            android:textColor="@color/color_white"
+            android:textSize="34dp"
+            app:layout_constraintBottom_toBottomOf="@id/timeselect_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/timeselect_title" />
+
+        <TextView
+            android:id="@+id/timeselect_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="@string/time_sure"
+            android:textColor="@color/color_green_light"
+            android:textSize="34dp"
+            app:layout_constraintBottom_toBottomOf="@id/timeselect_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/timeselect_title" />
+
+        <View
+            android:id="@+id/timeselect_devider"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/color_line_devider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/timeselect_title" />
+
+        <com.viomi.modulesetting.view.wheelview.WheelView
+            android:id="@+id/timeselect_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/timeselect_devider" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--android:background="@color/menufragment_select"-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/messagelist_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:paddingStart="10dp"
+        tools:context=".ui.activity.MessageListActivity">
+        <!--暂无消息-->
+        <TextView
+            android:id="@+id/message_no"
+            style="@style/font_style_sc_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/menufragment_select"
+            android:drawableTop="@drawable/ic_err"
+            android:drawablePadding="21dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/messagelist_nomessage"
+            android:textColor="@color/color_white_alpha_80"
+            android:textSize="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--消息类型的名字-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/message_title_list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:background="@color/messagetitle_normal_bg"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toStartOf="@id/message_content"
+            app:layout_constraintHorizontal_weight="10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/message_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="25"
+            app:layout_constraintStart_toEndOf="@id/message_title_list"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/color_basetitle_bg" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/message_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="message_content,message_title_list"
+            tools:visibility="visible" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

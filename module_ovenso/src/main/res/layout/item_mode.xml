@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/mode_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/mode_fj" />
+
+        <TextView
+            android:id="@+id/mode_name"
+            style="@style/font_style_sc_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="35dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+            android:textSize="40dp"
+            app:layout_constraintLeft_toLeftOf="@id/mode_bg"
+            app:layout_constraintTop_toTopOf="@id/mode_bg" />
+
+        <TextView
+            android:id="@+id/mode_total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/din_alternate_bold"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+            android:textSize="50dp"
+            app:layout_constraintLeft_toLeftOf="@id/mode_name"
+            app:layout_constraintTop_toBottomOf="@id/mode_name"
+            tools:text="@string/ovenso_time_format" />
+
+        <TextView
+            android:id="@+id/time_unite"
+            style="@style/font_style_sc_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:includeFontPadding="false"
+            android:text="@string/ovenso_timeunit"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toRightOf="@id/mode_total_time"
+            app:layout_constraintTop_toTopOf="@id/mode_total_time" />
+
+        <ImageView
+            android:id="@+id/mode_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="37dp"
+            android:layout_marginBottom="34dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:src="@drawable/ic_qingjie" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

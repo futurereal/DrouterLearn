@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:background="@drawable/selector_setting_item">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider_line_color_black"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/wlanset_connect_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:contentDescription="@null"
+            android:src="@drawable/wifi_lock"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/wlanset_name"
+            style="@style/setting_normal_text_horizontal_style"
+            android:layout_marginStart="12dp"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/wlanset_connect_status"
+            app:layout_constraintStart_toEndOf="@id/wlanset_connect_status"
+            app:layout_constraintTop_toTopOf="@+id/wlanset_connect_status"
+            app:layout_constraintVertical_bias="0.526"
+            tools:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/wlanset_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="54dp"
+            style="@style/font_style_sc_medium"
+            android:includeFontPadding="false"
+            android:text="@string/status_connected"
+            android:textColor="@color/color_99"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="@id/wlanset_name"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/wlanset_name" />
+
+        <ImageView
+            android:id="@+id/wlanset_signal_tip"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:contentDescription="@null"
+            android:src="@drawable/wifi_signal_high"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

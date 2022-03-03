@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog_single">
+
+        <ImageButton
+            android:id="@+id/filtererror_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/dialog_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/filtererror_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:drawableLeft="@drawable/filter"
+            android:drawablePadding="10dp"
+            android:text="@string/filter_title"
+            android:textColor="@color/color_white"
+            android:textSize="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/filtererror_lefetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:textColor="@color/color_orange"
+            android:textSize="34dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filtererror_title"
+            tools:text="@string/error_filter_1eft" />
+
+
+        <Button
+            android:id="@+id/filtererror_buy"
+            android:layout_width="410dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/selector_wifi_finish"
+            android:text="@string/filter_buynow"
+            android:textColor="@color/color_white"
+            android:textSize="34dp"
+            app:layout_constraintBottom_toTopOf="@id/filtererror_reset"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filtererror_lefetime" />
+
+        <Button
+            android:id="@+id/filtererror_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:background="@null"
+            android:drawableRight="@drawable/set_more_green"
+            android:text="@string/filter_reset"
+            android:textColor="@color/text_color"
+            android:textSize="34dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filtererror_buy" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

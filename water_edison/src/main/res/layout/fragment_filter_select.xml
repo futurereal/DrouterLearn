@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="549dp"
+        android:background="@drawable/shape_dialog_bg_top"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/filterselect_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="@string/setting_filter_title1"
+            android:textColor="@color/white"
+            android:textSize="40dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/filterselect_ro_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="26dp"
+            android:text="@string/filter_name_carbon"
+            android:textColor="#EEEEEE"
+            android:textSize="40dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filterselect_title" />
+
+        <ImageView
+            android:id="@+id/filterselect_ro_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/filter_selector"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="@id/filterselect_ro_title"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/filterselect_ro_title" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:background="@color/divider_line_color_black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filterselect_ro_title" />
+
+
+        <TextView
+            android:id="@+id/filterselect_fourone_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:layout_weight="1"
+            android:text="@string/setting_reset_51"
+            android:textColor="#EEEEEE"
+            android:textSize="40dp"
+            app:layout_constraintLeft_toLeftOf="@id/filterselect_ro_title"
+            app:layout_constraintRight_toRightOf="@id/filterselect_ro_title"
+            app:layout_constraintTop_toBottomOf="@id/filterselect_ro_title" />
+
+        <ImageView
+            android:id="@+id/filterselect_fourone_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/filter_selector"
+            app:layout_constraintLeft_toLeftOf="@id/filterselect_ro_select"
+            app:layout_constraintRight_toRightOf="@id/filterselect_ro_select"
+            app:layout_constraintTop_toBottomOf="@id/filterselect_ro_select" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:background="@color/divider_line_color_black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filterselect_fourone_selector" />
+
+
+        <View
+            android:id="@+id/filterselect_spliter"
+            android:layout_width="1px"
+            android:layout_height="20dp"
+            android:layout_marginTop="180dp"
+            android:background="@color/divider_line_color_black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filterselect_fourone_title" />
+
+
+        <TextView
+            android:id="@+id/filterselect_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="80dp"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/wifi_cancle"
+            android:textColor="#999999"
+            android:textSize="34dp"
+            app:layout_constraintBottom_toBottomOf="@id/filterselect_spliter"
+            app:layout_constraintRight_toLeftOf="@id/filterselect_spliter"
+            app:layout_constraintTop_toTopOf="@id/filterselect_spliter" />
+
+        <TextView
+            android:id="@+id/filterselect_clean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:text="@string/setting_filter_action1"
+            android:textColor="@color/color_green_light"
+            android:textSize="34dp"
+            app:layout_constraintBottom_toBottomOf="@id/filterselect_spliter"
+            app:layout_constraintLeft_toRightOf="@id/filterselect_spliter"
+            app:layout_constraintTop_toTopOf="@id/filterselect_spliter" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

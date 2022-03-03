@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_quit">退出</string>
+    <string name="oven_dialog_end">确定</string>
+    <string name="oven_dialog_not_end">取消</string>
+    <string name="oven_common_light">灯</string>
+    <string name="oven_common_open">已经打开</string>
+    <string name="oven_common_close">已经关闭</string>
+    <string name="oven_common_waterbox">水箱</string>
+    <string name="oven_cookparam_settingfail">设置失败</string>
+
+    <string name="setting_temp_title">温度设置</string>
+    <string name="setting_cup_title">杯量设置</string>
+    <string name="setting_mineral_title">矿物质设置</string>
+    <string name="setting_reset_filter">滤芯重置</string>
+
+    <string name="muc_set_fail">下发指令失败</string>
+    <string name="serial_disconnect">主控板连接异常</string>
+    <string name="muc_isupgrading">主控板正在升级</string>
+</resources>

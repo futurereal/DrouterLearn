@@ -1,0 +1,68 @@
+def isModuleLibary = isLibary.toBoolean()
+def isCmake = isCamke.toBoolean()
+apply from: "../build_config/common.gradle"
+android {
+    defaultConfig {
+        if (!isModuleLibary) {
+            applicationId "com.viomi.ffmpeg.cmd"
+            /*升级的sdk 需要用*/
+            versionCode 1
+            versionName "1.0.0"
+        }
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
+        //        ndk { abiFilters "arm64-v8a","armeabi-v7a","armeabi" }
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+                // 加上此句，否则会报dlopen failed: library "libc++_shared.so" not found错误
+                arguments "-DANDROID_STL=c++_shared"
+            }
+        }
+        // 解决   2 files found with path 'lib/arm64-v8a/libffmpeg.so' from inputs:
+        //      - D:\AndroidLearn\FFmpegAndroid-master\app\build\intermediates\merged_jni_libs\debug\out
+        //      - D:\AndroidLearn\FFmpegAndroid-master\app\build\intermediates\cmake\debug\obj
+        packagingOptions {
+            pickFirst 'lib/armeabi-v7a/libffmpeg.so'
+            pickFirst 'lib/arm64-v8a/libffmpeg.so'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    // 注释掉 则 使用lib 下面的so 进行加载 需要 libc++_shared.so 辅助，否则会报错
+
+    if (isCmake) {
+        externalNativeBuild {
+            cmake {
+                path file('CMakeLists.txt')
+            }
+        }
+    } else {
+        sourceSets {
+            main {
+                jniLibs.srcDirs = ['libs']
+                jni.srcDirs = []
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'META-INF/proguard/coroutines.pro'
+        pickFirst 'lib/armeabi-v7a/libmp3lame.so'
+        pickFirst 'lib/arm64-v8a/libmp3lame.so'
+    }
+}
+
+dependencies {
+    implementation project(path: ':module_common')
+}
